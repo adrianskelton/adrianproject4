@@ -1,110 +1,402 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Family Recipes
+<img src="media/mockup.png" ><br>
+- [Live Site](https://comingsoon.herokuapp.com/)
+- [GitHub Repo](https://github.com/adrianskelton/repo)
 
-Welcome Adrian Skelton,
+Family Recipe is a recipe sharing website where users can upload and share recipes as well as reading others. 
+<br>
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Table of contents
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
 
-## Gitpod Reminders
+## Overview
+lorumipsum
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## UX
+Five Planes Of Website Design:<br>
+### 1. Strategy<hr>
 
-`python3 -m http.server`
+To create a website with good UI and UX 
 
-A blue button should appear to click: _Make Public_,
+- Project Setup
+  - Create 
 
-Another blue button should appear to click: _Open Browser_.
+- UX
+  - Favicon logo
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- Navigation
+  - lorumipsum
 
-A blue button should appear to click: _Make Public_,
+- CRUD
+  - lorumipsum
+- Authentication
+  - lorumipsum
+- Validation
+  - lorumipsum
+- Administration
+  - lorumipsum
+- Deployment
+  - lorumipsum
+- Testing
+  - lorumipsum
+- Documentation
+  - lorumipsum
 
-Another blue button should appear to click: _Open Browser_.
+<br>
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+**Agile Methodology**<br><br>
+I used Agile methodology.<br>
+I used [GitHub](https://github.com/) for all the user stories and epics. As the user stories were accomplished, they were moved in the GitHub Kanban board from **ToDo**, to **In Progress**, **Done** and **Not Implemented** lists.
+The board can be viewed [here](https://github.com/users/adrianskelton/projects/5/).
 
-To log into the Heroku toolbelt CLI:
+**Kanban Board**<br><br>
+<img src="media/kanban.png"><br><br>
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+<details>
+<summary>Sprint 1: Base Setup</summary>
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+|EPIC|User Story|Description|
+|:--|:--|:--|
+|Project Setup|Project setup|As a developer, I need to set up the project so that it is ready for implementing the core features.|
 
-------
+</details><br>
 
-## Release History
+<details>
+<summary>Sprint 2: Navigation & Account Creation</summary>
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+|EPIC|User Story|Description|
+|:--|:--|:--|
+|**Project Setup**|||
+|Navigation|Navbar|As a developer I need to create a navbar so that users can navigate the site.|
 
-**September 20 2023:** Update Python version to 3.9.17.
+</details><br>
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+<details>
+<summary>Sprint 3: Styling</summary>
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+|EPIC|User Story|Description|
+|:--|:--|:--|
+|CRUD|Create a recipe|As a logged in user I create a recipe.|
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+</details><br>
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+<details>
+<summary>Sprint 4: CRUD</summary>
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+|EPIC|User Story|Description|
+|:--|:--|:--|
+|CRUD|Delete recipe|As a logged in user I can delete a recipe.|
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+</details><br>
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+<details>
+<summary>Sprint 5: Search & Email</summary>
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+|EPIC|User Story|Description|
+|:--|:--|:--|
+|Administration|Admin search|As an admin I can filter and search the recipes so that I can find more relevant recipes easily.|
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+</details><br>
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+<details>
+<summary>Sprint 6: Testing & Documentation</summary>
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+|EPIC|User Story|Description|
+|:--|:--|:--|
+|Testing|Unit Tests|As a developer I need to use testing so that I an sure my code is free of bugs and will not result in site errors.|
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+</details><br>
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### 2. Scope<hr>
+**Simple and Intuitive UX**<br>
+- Create a website that makes people want to share and read recipes.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
-------
+**Relevant Content**<br>
+- Make all the content easily accessible
 
-## FAQ about the uptime script
 
-**Why have you added this script?**
+**Responsiveness**<br>
+- Create a responsive website that works on every device and screen size.<br><br>
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+### 3. Structure<hr>
+The website is designed with the user in mind and has the pages listed below:
+- Landing page
+  - Recipes
+  - Login
+- Account Home
 
-**How will this affect me?**
+There are also 2 pages available to users who are signed in:
+- Submit Recipes
+- Login
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+#### Navigation
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+The navbar is bootstrap .
+All users will see:
+- lorum ipsum
 
-**So….?**
+A user who isn't signed in will see:
+- lorum ipsum
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+<img src="media/navbar_guest.png" alt=""><br>
 
-**Can I opt out?**
+A user who is signed in will see:
+- My Account
+- Logout
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+<img src="media/signed-in-navbar.png" alt=""><br>
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+Hamburger menu image.<br>
+<img src="media/hamburger-menu.gif" alt=""><br>
 
-**Anything more?**
+Hover effect of links.<br>
+<img src="media/nav-hover.gif" alt=""><br>
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+#### Footer
 
----
+The footer is the same across all the pages and includes:
+- Social Media Icons (Facebook, Instagram, Github)
+- A copyright statement
 
-Happy coding!
+Link hover effect to show the link is active.<br>
+<img src="media/footer-hover.gif" alt="Video of the footer" width="100%"><br>
+
+#### Pages
+
+##### Landing Page
+
+The landing page is divided into 4 sections:
+- Hero Image  Logo
+- Recipe section
+
+
+##### Sign Up Page
+
+<img src="media/.png" alt="" width="60%"><br>
+
+This page uses the allauth template as a base with custom design added.
+The username and password fields are mandatory but the email is optional. If the user signs up with and includes and email address they will be sent email updates on:
+- lorum ipsum
+
+
+##### Sign In Page
+
+<img src="media/log-in-page.png" alt="e" width="60%"><br>
+
+This page 
+
+##### Account Home Page
+
+<img src="media/account-home.png" alt="Image of the account home page"><br>
+
+This page shows the users recipes.
+On a large screen it is divided into 2 sections:
+- lorum ipsum
+
+
+
+
+lorum
+
+##### Admin Account Home Page
+<img src="media/search-recipes.png" alt="Image of the admin search panel" width="60%"><br>
+The account home page for an Admin user has the addition of a Search recipes panel giving the admin user the ability to search by:
+- Date of recipe
+- Username
+
+If the number of recipes exceeds 25 the page paginates.<br>
+
+##### Submit Recipte
+
+The Submit recipe has 6 inputs:
+- A name of the recipe
+- The country of origin
+- Description
+- Cooking instructions
+- Ingredients list
+
+The form has built in validation to alert the user if:
+- There are fields missing
+
+Once a recipe has been successfully added the user is taken back to the user account page and a message saying "recipe saved" will dissapear after 5 seconds.<br>
+
+<img src="media/recipe.gif" alt=""><br>
+
+
+User's View<br>
+<img src="media/user.png" alt="Image of" width="70%"><br>
+Admin's View<br>
+<img src="media/admin.png" alt="Image " width="70%"><br>
+
+##### Update Recipe
+
+If the user clicks on the edit recipe button recipe detail page they are then taken to the recipe selected to edit and save again.
+Once a recipe has been successfully edited the user is taken back to the user account page and a message saying "recipe saved" will dissapear after 5 seconds.<br>
+
+##### Confirm Delete Recipe Page
+<img src="media/confirm-delete-recipe.png" alt="" width="60%"><br>
+If the user clicks on the 'Delete Recipe' they will be asked if they are sure they want to delete it.
+
+#### Sitemap
+The project flowcharts for the site structure was created using [LucidChart](https://www.lucidchart.com/).
+<details>
+<summary>Sitemap:</summary>
+<img src="media/sitemap.png"><br>
+</details>
+
+### 4. Skeleton<hr>
+**Wireframes**
+
+The wireframes for mobile and desktop were created with [Balsamiq](https://balsamiq.com/) tool and can be viewed <details>
+<summary>Here:</summary>
+Homepage<br>
+<img src="media/homepage-wireframe.png"><br>
+Login/Logout pages<br>
+<img src="media/login-logout-wireframe.png"><br>
+Submit recipe<br>
+<img src="media/submit-recipe-wireframe.png"><br>
+</details><br>
+
+**Database**
+The project uses ElephantSQL as PostgreSQL relational database for storing the data.
+<details>
+  <summary>Model</summary>
+  <img src="media/database-schema.png"><br>
+</details><br>
+
+### 5. Surface<hr>
+
+#### Color Scheme and Fonts
+
+- The fonts used for this site were imported from [Google Fonts](https://fonts.google.com/):
+  - Josefin for the headings
+  - Crimson for the body
+
+<img src="media/fonts.png" width="60%">
+
+- The colors used were based on the the colors in the logo.
+  - #color1
+  - #color2
+  - #color3
+
+<img src="media/color-palette2.png" width="60%">
+
+#### Visual Effects
+
+**Hover effects**<br>
+NavBar<br>
+<img src="media/nav-hover.gif" width="100%"><br>
+Footer<br>
+<img src="media/footer-hover.gif" width="100%"><br>
+
+
+**Logo**<br>
+Logo with effect when hovered<br>
+<img src="media/interactive-logo.gif" width="40%"><br>
+
+## Features
+
+### Existing Features
+
+#### Recipe Modal
+lorum ipsum
+
+##### Recipe List
+Each recipe is displayed on a card on the account home page and contains:
+lorumipsum
+
+##### Update Recipe Page
+lorumipsum
+
+##### Confirm Delete Recipe Page
+lorumipsum
+
+##### Admin Search Panel
+lorumipsum
+
+##### Update Email
+lorumipsum
+
+##### Change Password
+Users can change their password from the account panel in the account home page.
+
+### Potential Future Features
+- Allow admin users to edit the services from the account home rather than from the django backend panel
+
+
+## Responsive Layout and Design
+The bootstrap grid system and flexbox was used to create a fully responsive layout and testing on multiple screen sizes and devices was carried out to make sure it each page looks good in many settings.
+
+**Tested devices:**
+
+- iPhone 13
+
+
+## Tools Used
+
+- [GitHub](https://github.com/) for hosting 
+
+
+
+### Python packages
+
+- [Django](https://www.djangoproject.com/) used as the framework 
+
+
+A full list of the requirements and the versions used can be found in the requirements.txt file. To install them and run them on your own machine first setup a virtual environment with the command to create a venv... <br>
+`python3 -m venv venv` <br>
+Then this command to run it... <br>
+`source venv/bin/activate` <br>
+To stop running the environment simply type the command... <br>
+`deactivate`
+
+To create the requirements.txt file I ran the following command:<br>
+`pip3 freeze > requirements.txt`
+
+## Testing
+
+Tests  [TESTING.md](TESTING.md).
+
+## Bugs
+
+- lorumipsum
+
+## Deployment
+
+### ElephantSQL
+
+
+### Cloudinary
+
+
+### Heroku
+
+    
+### Fork the repository
+
+
+### Clone the repository
+
+- lorumipsum
+
+## Credits
+
+### Content
+asdfasdf
+
+### Media
+logo [Casdfaa](https://asdfasdafgb/).
+
+### Code
+
+- Django's :
+  - [asdfe](asdfasdfa)
+  - [sf](asdasdf.html)
+
+
+
+## Acknowledgements
+
+- lorumipsum
