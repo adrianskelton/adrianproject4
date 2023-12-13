@@ -14,15 +14,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-]
-
-from django.views.generic import RedirectView
+from django.urls import path, include
+from django.views.generic.base import RedirectView
 from django.conf.urls import url
 
-url_patterns=[
+favicon_view = RedirectView.as_view(url='/static/favicon.ico', permanent=True)
+
+
+urlpatterns = [
+    path('', include('recipe.urls')),
+    path('admin/', admin.site.urls),
     url(r'^favicon\.ico$',RedirectView.as_view(url='/static/images/favicon.ico')),
 ]
+
+
+
+

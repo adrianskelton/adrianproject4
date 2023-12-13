@@ -1,9 +1,8 @@
-from django.shortcuts import render
-from django.views import generic
-from .models import Recipe
+from django.shortcuts import render, get_object_or_404
+from django.http import HttpResponse
 
-class RecipeList(generic.ListView):
-    model = Post
-    queryset = Post.object.filter(status=1).order_by('-created_on')
-    template_name = 'index.html'
-    paginate_by = 9
+def home(request):
+    return render(request, 'index.html')
+
+
+
