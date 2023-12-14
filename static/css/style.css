@@ -1,4 +1,20 @@
 body {
     background-color: #F9FAFC;
+    width: 90%;
 }
 
+.dark-bg {
+    background-color: #4d4d4d;
+}
+
+.logo {
+    display: block;
+    max-height: 180px;
+    text-align: center;
+}
+
+header {
+    margin-left: 0px;
+    margin-right: 0px;
+    max-height: 150vh;
+}
