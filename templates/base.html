@@ -28,7 +28,7 @@
         <div class="row">
             <div class="col-8">
                 <div class="d-flex justify-content-start align-items-left"><a
-                        href="{% url 'home' %}"><span><img src="static/images/logo.png" class="logo"></span></a>
+                        href="{% url 'home' %}"><span><img src="../static/images/logo.png" class="logo"></span></a>
                 </div>
             </div>
             <div class="col-4 float-right">
@@ -45,6 +45,9 @@
                             {% if user.is_authenticated %}
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'recipe' %}">Recipes</a>
                             </li>
                             {% else %}
                             <li class="nav-item">
