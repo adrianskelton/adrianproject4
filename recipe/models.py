@@ -1,6 +1,8 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
 from django.contrib.auth.models import User
+from django.core.exceptions import ValidationError
+from django.core.validators import MaxValueValidator
 
 # Create your models here.
 
@@ -17,12 +19,12 @@ class Recipe(models.Model):
     description = models.TextField()
     ingredients = models.TextField()
     instructions = models.TextField()
-    servings = models.PositiveIntegerField('servings')
+    servings = models.PositiveIntegerField(validators=[MaxValueValidator(20)])
     likes = models.ManyToManyField(User, related_name='recipe_likes', blank=True)
+    
+    class Meta:
+        ordering = ["-date"]
+        
+    def __str__(self):
+        return self.title
 
-    
-class Meta:
-    ordering = ["-created_on"]
-    
-def __str__(self):
-    return self.title
