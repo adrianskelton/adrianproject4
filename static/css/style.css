@@ -1,6 +1,24 @@
 body {
     background-color: #F9FAFC;
-    width: 90%;
+    width: 100%;
+    align-self: center;
+}
+
+h1 {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.hero {
+    width: 100%;
+    height: auto;
+}
+
+.crimson {
+    font-family: 'Crimson Text', serif;
+}
+
+.home-writeup {
+    padding-top:5px;
 }
 
 .dark-bg {
@@ -10,7 +28,6 @@ body {
 .logo {
     display: block;
     max-height: 180px;
-    text-align: center;
 }
 
 header {

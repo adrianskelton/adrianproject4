@@ -18,13 +18,19 @@ from django.urls import path, include
 from django.views.generic.base import RedirectView
 from django.conf.urls import url
 
-favicon_view = RedirectView.as_view(url='/static/favicon.ico', permanent=True)
 
+from accounts.views import (
+    login_view, 
+    logout_view,
+    register_view,
+)
 
 urlpatterns = [
-    path('', include('recipe.urls')),
     path('admin/', admin.site.urls),
-    url(r'^favicon\.ico$',RedirectView.as_view(url='/static/images/favicon.ico')),
+    path('login/', login_view, name='login'),
+    path('logout/', logout_view, name='logout'),
+    path('register/', register_view, name='register'),
+    path('', include('recipe.urls')),
 ]
 
 
