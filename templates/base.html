@@ -3,10 +3,11 @@
 <!DOCTYPE html>
 <html class="h-100">
 <head>
+    {% load static %}
     <title>Family Recipes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="shortcut icon" type="image/png" href="static/images/favicon.png" />
+    <link rel="icon" href="{% static 'images/favicon.png' %}">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Josefin+Sans:wght@300&display=swap"
         rel="stylesheet">
@@ -22,7 +23,7 @@
 </head>
 
 <body class="d-flex flex-column h-100 main-bg">
-
+    
     <!-- Navigation -->
     <div class="container-fluid">
         <div class="row">

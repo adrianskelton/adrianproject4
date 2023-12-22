@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <h1>{{ recipe.title }}</h1>
+    <p>Country: {{ recipe.country }}</p>
+    <p>Servings: {{ recipe.servings }}</p>
+    <img src="{{ recipe.featured_image.url }}" alt="{{ recipe.title }} Image">
+
+    <h2>Description</h2>
+    <p>{{ recipe.description }}</p>
+
+    <h2>Ingredients</h2>
+    <p>{{ recipe.ingredients | linebreaksbr }}</p>
+
+    <h2>Instructions</h2>
+    <p>{{ recipe.instructions | linebreaksbr }}</p>
+
+    <p>Likes: {{ recipe.likes.count }}</p>
+
+    {# Add any other information or features you want to display #}
+
+    {# Add a form for users to like the recipe #}
+    <form method="post" action="{% url 'like_recipe' pk=recipe.pk %}"> <!--placeholder for like function-->
+        {% csrf_token %}
+        <button type="submit">Like Recipe</button>
+    </form>
+</div>
+
+{% endblock %}

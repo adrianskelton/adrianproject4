@@ -1,3 +1,5 @@
+<!-- templates/recipe.html -->
+
 {% extends "base.html" %}
 
 {% block content %}
@@ -8,14 +10,28 @@
             <img src="../static/images/hero.png" class="hero">
         </div>
         <div class="col-6">
-            <h1>Recipe Section</h1>
-            <p class="crimson home-writeup">Lorum
-
+            <h1>Lets get cooking!</h1>
+            <p class="crimson home-writeup">
+                {% if Recipes %}
+                    {% with random_recipe=Recipes|random %}
+                        <p>{{ random_recipe.title }}</p>
+                        <p>{{ random_recipe.description }}</p>
+                    {% endwith %}
+                {% else %}
+                    <p>No recipes available.</p>
+                {% endif %}
             </p>
+            
+            <!-- New Recipe Form -->
+            <h2>Submit a New Recipe</h2>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+
+                <button type="submit">Submit Recipe</button>
+            </form>
         </div>
     </div>
 </div>
 
-</div>
-
-{%endblock%}
+{% endblock %}
