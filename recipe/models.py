@@ -20,7 +20,7 @@ class Recipe(models.Model):
     ingredients = models.TextField()
     instructions = models.TextField()
     servings = models.PositiveIntegerField(validators=[MaxValueValidator(20)])
-    likes = models.ManyToManyField(User, related_name='recipe_likes', blank=True)
+    ## fix this later likes = models.ManyToManyField(User, related_name='recipe_likes', blank=True)
     
     class Meta:
         ordering = ["-date"]

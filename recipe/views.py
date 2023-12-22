@@ -3,12 +3,6 @@ from django.http import HttpResponse
 from .forms import RecipeForm
 from .models import Recipe  # Import the Recipe model
 
-def home(request):
-    return render(request, 'index.html')
-
-def recipe_view(request):
-    return render(request, 'recipe.html')
-
 def create_recipe(request):
     form = RecipeForm()
 
@@ -18,7 +12,14 @@ def create_recipe(request):
             recipe = form.save()
             return redirect('recipe_detail', pk=recipe.pk)
 
+    print(form.errors)  # Add this line to print form errors in the terminal
     return render(request, 'create_recipe.html', {'form': form})
+
+def home(request):
+    return render(request, 'index.html')
+
+def recipe_view(request):
+    return render(request, 'recipe.html')
 
 def recipe_detail(request, pk):
     recipe = get_object_or_404(Recipe, pk=pk)
