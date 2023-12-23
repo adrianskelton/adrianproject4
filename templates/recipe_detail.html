@@ -17,13 +17,12 @@
     <h2>Instructions</h2>
     <p>{{ recipe.instructions | linebreaksbr }}</p>
 
-    <!--feature to be added><p>Likes: {{ recipe.likes.count }}</p>-->
+    <p>Likes: {{ recipe.likes.count }}</p>
 
-    <!--
-    <form method="post" action="{% url 'like_recipe' pk=recipe.pk %}"> placeholder for like function
+    <form method="post" action="{% url 'like_recipe' pk=15 %}"> 
         {% csrf_token %}
         <button type="submit">Like Recipe</button>
-    </form>-->
+    </form>
 </div>
 
 {% endblock %}
