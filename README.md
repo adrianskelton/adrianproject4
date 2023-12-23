@@ -383,6 +383,9 @@ Tests  [TESTING.md](TESTING.md).
 
 ## Credits
 
+To style the forms I watched the following tutorials
+- [Style Django Forms With Bootstrap - Django Blog #5](https://www.youtube.com/watch?v=6-XXvUENY_8&ab_channel=Codemy.com)
+
 ### Content
 asdfasdf
 
