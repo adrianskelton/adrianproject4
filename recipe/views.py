@@ -28,14 +28,12 @@ def like_recipe(request, pk):
     # Redirect to recipe detail page
     return redirect('recipe_detail', pk=pk) 
 
-
-
-
 def home(request):
     return render(request, 'index.html')
 
 def recipe_view(request):
-    return render(request, 'recipe.html')
+    recipes = Recipe.objects.all()
+    return render(request, 'recipe.html', {'Recipes': recipes})
 
 def recipe_detail(request, pk):
     recipe = get_object_or_404(Recipe, pk=pk)
