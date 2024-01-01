@@ -28,8 +28,12 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-8">
-                <div class="d-flex justify-content-start align-items-left"><a
-                        href="{% url 'home' %}"><span><img src="{% static 'images/logo.png' %}" class="logo"></span></a>
+                <div class="d-flex justify-content-start align-items-left logo"><a
+                        href="{% url 'home' %}"><span>
+                            <img src="{% static 'images/logo.png' %}" class="desktop" />
+                            <img src="{% static 'images/logo-mobile.png' %}" class="mobile" />
+                        </span></a>
+                          </div>
                 </div>
             </div>
             <div class="col-4 float-right">

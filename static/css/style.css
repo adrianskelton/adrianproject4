@@ -31,6 +31,11 @@ h1 {
     max-height: 180px;
 }
 
+.logo .mobile {
+    display: none;
+    max-height: 180px;
+  }
+
 header {
     margin-left: 0px;
     margin-right: 0px;
@@ -51,3 +56,22 @@ header {
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
+.latest-recipes {
+    margin-top: 20px;
+}
+
+/* For mobile screen sizes */
+
+@media (max-width: 600px) {
+    .logo .mobile {
+      display: block;
+      max-height: 180px;
+    }
+    .logo .desktop {
+      display: none;
+      max-height: 180px;
+    }
+  }
+
+/* For tablet screen sizes */

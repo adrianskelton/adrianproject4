@@ -16,8 +16,16 @@
             </p>
         </div>
     </div>
+    <div class="latest-recipes">
+        <h1>Latest Recipes</h1>
+        <ul>
+            {% for recipe in new_section_data %}
+            <li>{{ recipe.title }} - {{ recipe.country }}</li>
+            {% endfor %}
+        </ul>
+
+    </div>
 </div>
 
-</div>
 
 {%endblock%}
