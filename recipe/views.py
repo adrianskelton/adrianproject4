@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from .forms import RecipeForm
 from .models import Recipe  # Import the Recipe model
+from .models import like_model
 
 def create_recipe(request):
     form = RecipeForm()

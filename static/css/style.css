@@ -36,3 +36,18 @@ header {
     margin-right: 0px;
     max-height: 150vh;
 }
+
+.random-image {
+    width: auto;
+    max-height: 300px;
+    border-radius: 10px;
+}
+
+.random-recipe-title {
+    
+}
+
+.margins-30px {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}

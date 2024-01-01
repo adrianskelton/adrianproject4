@@ -10,10 +10,10 @@
             <img src="../static/images/hero.png" class="hero">
         </div>
         <div class="col-6">
-            <h1>Lets get cooking!</h1>
             <p class="crimson home-writeup">
                 {% if Recipes %}
                     {% with random_recipe=Recipes|random %}
+                        <img src="{{ random_recipe.featured_image.url }}" alt="{{ random_recipe.title }}" class="random-image">
                         <p>{{ random_recipe.title }}</p>
                         <p>{{ random_recipe.description }}</p>
                     {% endwith %}
