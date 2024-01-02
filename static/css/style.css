@@ -29,11 +29,13 @@ h1 {
 .logo {
     display: block;
     max-height: 180px;
+    max-width: fit-content;
 }
 
 .logo .mobile {
     display: none;
     max-height: 180px;
+    max-width: fit-content;
   }
 
 header {

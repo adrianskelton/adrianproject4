@@ -32,6 +32,15 @@ def like_recipe(request, pk):
 def home(request):
     return render(request, 'index.html')
 
+    latest_recipes = Recipe.objects.order_by('-date')[:5]
+
+    context = {
+        'new_section_data': latest_recipes,
+        # Include other context variables as needed
+    }
+
+    return render(request, 'your_app/home.html', context)
+
 def recipe_view(request):
     recipes = Recipe.objects.all()
     return render(request, 'recipe.html', {'Recipes': recipes})
