@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.http import HttpResponse
 from .forms import RecipeForm
 from .models import Recipe  # Import the Recipe model
@@ -30,7 +31,7 @@ def like_recipe(request, pk):
     return redirect('recipe_detail', pk=pk) 
 
 def home(request):
-    return render(request, 'index.html')
+    #return render(request, 'index.html')
 
     latest_recipes = Recipe.objects.order_by('-date')[:5]
 
@@ -39,7 +40,7 @@ def home(request):
         # Include other context variables as needed
     }
 
-    return render(request, 'your_app/home.html', context)
+    return render(request, 'index.html', context)
 
 def recipe_view(request):
     recipes = Recipe.objects.all()
@@ -48,3 +49,19 @@ def recipe_view(request):
 def recipe_detail(request, pk):
     recipe = get_object_or_404(Recipe, pk=pk)
     return render(request, 'recipe_detail.html', {'recipe': recipe})
+
+def all_recipes(request):
+    all_recipes_list = Recipe.objects.all()
+    paginator = Paginator(all_recipes_list, 10) #Show 10 recipes per page
+
+    page = request.GET.get('page')
+    try:
+        recipes = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        recipes = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        recipes = paginator.page(paginator.num_pages)
+
+    return render(request, 'all_recipes.html', {'recipes': recipes})
