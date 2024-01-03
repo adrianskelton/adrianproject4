@@ -12,10 +12,18 @@
             <p class="crimson home-writeup">Family recipes are usually not shared but what is the fun in that?
                 <br>We believe that all good things in life are better shared, like laughs, adventures and food.<br><br>
                 So lets get started and share the best recipes we have while finding others we never knew about.
-
             </p>
+            {% if user.is_authenticated %}
+            <div class="col-md-6 crud-section">
+            <h1>Welcome {{ user.username }}!</h1>
+            <p class="crimson"><a href="{% url 'user_recipes' %}">View Your Recipes</a>
+            </p>
+            </div>
+            {% endif %}
+            
         </div>
     </div>
+
     <div class="latest-recipes">
         <h1>Latest Recipes</h1>
         {% for recipe in new_section_data %}

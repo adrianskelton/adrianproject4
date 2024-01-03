@@ -18,17 +18,28 @@ def create_recipe(request):
     return render(request, 'create_recipe.html', {'form': form})
 
 def like_recipe(request, pk):
-    item = get_object_or_404(like_model, pk=pk)
+    recipe = get_object_or_404(Recipe, pk=pk)
 
     # Check if user has already liked item 
-    if request.user in item.likes.all():
+    if request.user in recipe.likes.all():
         # User has liked item, so unlike
-        item.likes.remove(request.user)
+        recipe.likes.remove(request.user)
     else:
         # User has not liked, so like
-        item.likes.add(request.user)
+        recipe.likes.add(request.user)
     # Redirect to recipe detail page
     return redirect('recipe_detail', pk=pk) 
+
+def unlike_recipe(request, pk):
+    recipe = get_object_or_404(Recipe, pk=pk)
+
+    # Check if the user has already liked the recipe
+    if request.user in recipe.likes.all():
+        # User has liked the recipe, so unlike
+        recipe.likes.remove(request.user)
+
+    # Redirect to the recipe detail page
+    return redirect('recipe_detail', pk=pk)
 
 def home(request):
     #return render(request, 'index.html')
@@ -65,3 +76,18 @@ def all_recipes(request):
         recipes = paginator.page(paginator.num_pages)
 
     return render(request, 'all_recipes.html', {'recipes': recipes})
+
+def top_five(request):
+    top_five_recipes = Recipe.objects.order_by('-likes__count')[:5]
+    return render(request, 'top_five.html', {'recipes': top_five_recipes})
+
+def sort_by_country(request, country):
+    recipes_by_country = Recipe.objects.filter(country=country)
+    return render(request, 'recipes_by_country.html', {'recipes': recipes_by_country})
+
+def latest_recipes(request):
+    latest_recipes = Recipe.objects.order_by('-created_at')[:5]
+    return render(request, 'latest_recipes.html', {'recipes': latest_recipes})
+
+def user_recipes(request):
+    return render(request, 'user_recipes.html')
