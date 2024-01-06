@@ -13,9 +13,9 @@
 {% for recipe in recipes %}
 <div class="recipe-item row">
 <div class="col-md-6">
-<h2>{{ recipe.title }}</h2>
-<p>Country: {{ recipe.country }}</p>
-<p>Author: {{ recipe.author.username }}</p>
+<h2>{{ recipe.title|title }}</h2>
+<p>Country: {{ recipe.country|title }}</p>
+<p>Author: {{ recipe.author.username|title }}</p>
 <p>Description: {{ recipe.description }}</p>
 <p>Ingredients: {{ recipe.ingredients }}</p>
 <p>Instructions: {{ recipe.instructions }}</p>
