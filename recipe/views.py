@@ -90,4 +90,10 @@ def latest_recipes(request):
     return render(request, 'latest_recipes.html', {'recipes': latest_recipes})
 
 def user_recipes(request):
-    return render(request, 'user_recipes.html')
+    user_recipes = Recipe.objects.filter(author=request.user)
+    return render(request, 'user_recipes.html', {'user_recipes': user_recipes})
+
+def get_default_author():
+    return User.objects.get(username='default_username')
+
+    author = models.ForeignKey(User, on_delete=models.CASCADE)

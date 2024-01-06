@@ -1,11 +1,21 @@
+html {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 body {
     background-color: #F9FAFC;
     width: 100%;
     align-self: center;
+
 }
 
 h1 {
     font-family: 'Josefin Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
 }
 
 .hero {
@@ -20,6 +30,15 @@ h1 {
 
 .home-writeup {
     padding-top:5px;
+}
+
+.crud-section {
+    max-width: 100%;
+}
+
+.round-image {
+    border-radius: 25px;
+    padding: 20px;
 }
 
 .dark-bg {
@@ -61,6 +80,15 @@ header {
 
 .latest-recipes {
     margin-top: 20px;
+}
+
+.nav-center {
+    font-family: 'Josefin Sans', sans-serif
+    text-decoration: none;
+}
+
+.nav-center:hover {
+    text-decoration: underline;
 }
 
 /* For mobile screen sizes */

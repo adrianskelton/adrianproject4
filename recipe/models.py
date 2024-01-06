@@ -12,6 +12,7 @@ class Recipe(models.Model):
     """
     My Recipe model to publish recipes
     """
+    author = models.ForeignKey(User, on_delete=models.CASCADE, default=1) 
     date = models.DateTimeField(auto_now_add=True)
     title = models.CharField(max_length=100)
     country = models.CharField(max_length=100)
