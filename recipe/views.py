@@ -3,7 +3,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django import forms
-from .forms import RecipeForm, CommentForm
+from .forms import RecipeForm, CommentForm, DeleteRecipeForm
 from .models import Recipe, like_model, Comment
 
 @login_required
@@ -123,3 +123,15 @@ def add_comment(request, recipe_id):
         form = CommentForm()
 
     return render(request, 'recipe/add_comment.html', {'form': form})
+
+def delete_recipe(request, pk):
+    recipe = get_object_or_404(Recipe, pk=pk)
+    if request.method == 'POST':
+        form = DeleteRecipeForm(request.POST)
+        if form.is_valid() and form.cleaned_data['confirmation']:
+            recipe.delete()
+            return redirect('user_recipes')
+    else:
+        form = DeleteRecipeForm()
+
+    return render(request, 'delete_recipe.html', {'recipe': recipe, 'form': form})

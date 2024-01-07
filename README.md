@@ -1,5 +1,5 @@
 # Family Recipes
-<img src="media/mockup.png" ><br>
+<img src="static/images/readme/responsive.png"><br>
 - [Live Site](https://comingsoon.herokuapp.com/)
 - [GitHub Repo](https://github.com/adrianskelton/repo)
 
