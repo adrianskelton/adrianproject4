@@ -1,10 +1,12 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
-from .forms import RecipeForm
-from .models import Recipe  # Import the Recipe model
-from .models import like_model
+from django import forms
+from .forms import RecipeForm, CommentForm
+from .models import Recipe, like_model, Comment
 
+@login_required
 def create_recipe(request):
     form = RecipeForm()
 
@@ -12,6 +14,7 @@ def create_recipe(request):
         form = RecipeForm(request.POST, request.FILES)
         if form.is_valid():
             recipe = form.save()
+            recipe.author = request.user
             return redirect('recipe_detail', pk=recipe.pk)
 
     print(form.errors)  # Add this line to print form errors in the terminal
@@ -48,7 +51,6 @@ def home(request):
 
     context = {
         'new_section_data': latest_recipes,
-        # Include other context variables as needed
     }
 
     return render(request, 'index.html', context)
@@ -59,7 +61,17 @@ def recipe_view(request):
 
 def recipe_detail(request, pk):
     recipe = get_object_or_404(Recipe, pk=pk)
-    return render(request, 'recipe_detail.html', {'recipe': recipe})
+    comments = recipe.comments.all()  
+    comment_form = CommentForm()
+
+    if request.method == 'POST':
+        comment_form = CommentForm(request.POST)
+        if comment_form.is_valid():
+            new_comment = comment_form.save(commit=False)
+            new_comment.recipe = recipe
+            new_comment.save()
+
+    return render(request, 'recipe_detail.html', {'recipe': recipe, 'comments': comments, 'comment_form': comment_form})
 
 def all_recipes(request):
     all_recipes_list = Recipe.objects.all()
@@ -77,9 +89,13 @@ def all_recipes(request):
 
     return render(request, 'all_recipes.html', {'recipes': recipes})
 
+def user_recipes(request):
+    user_recipes = Recipe.objects.filter(author=request.user)
+    return render(request, 'user_recipes.html', {'user_recipes': user_recipes})
+
 def top_five(request):
     top_five_recipes = Recipe.objects.order_by('-likes__count')[:5]
-    return render(request, 'top_five.html', {'recipes': top_five_recipes})
+    return render(request, 'all_recipes.html', {'recipes': top_five_recipes})
 
 def sort_by_country(request, country):
     recipes_by_country = Recipe.objects.filter(country=country)
@@ -89,11 +105,21 @@ def latest_recipes(request):
     latest_recipes = Recipe.objects.order_by('-created_at')[:5]
     return render(request, 'latest_recipes.html', {'recipes': latest_recipes})
 
-def user_recipes(request):
-    user_recipes = Recipe.objects.filter(author=request.user)
-    return render(request, 'user_recipes.html', {'user_recipes': user_recipes})
+def add_comment(request, recipe_id):
 
-def get_default_author():
-    return User.objects.get(username='default_username')
+    recipe = get_object_or_404(Recipe, id=recipe_id)
+    
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
 
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+        if form.is_valid():
+            new_comment = form.save(commit=False)
+            new_comment.post = recipe
+            new_comment.save()
+
+            return redirect('recipe_detail', pk=recipe_id)
+
+    else:
+        form = CommentForm()
+
+    return render(request, 'recipe/add_comment.html', {'form': form})

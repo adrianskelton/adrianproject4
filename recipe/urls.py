@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import home, recipe_view, create_recipe, recipe_detail, like_recipe, unlike_recipe, top_five, sort_by_country, latest_recipes, all_recipes, user_recipes
+from .views import home, recipe_view, create_recipe, recipe_detail, user_recipes, like_recipe, unlike_recipe, top_five, sort_by_country, latest_recipes, all_recipes, add_comment
 
 from . import views
 
@@ -15,4 +15,6 @@ urlpatterns = [
     path('latest-recipes/', latest_recipes, name='latest_recipes'),
     path('sort-by-country/', sort_by_country, name='sort_by_country'),
     path('user-recipes/', user_recipes, name='user_recipes'),
+    #path('recipe/<int:recipe_id>/add_comment/', add_comment, name='latest_recipes'),
+    path('recipe/<int:recipe_id>/add_comment/', add_comment, name='add_comment'),
 ]

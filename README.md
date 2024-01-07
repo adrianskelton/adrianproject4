@@ -3,7 +3,8 @@
 - [Live Site](https://comingsoon.herokuapp.com/)
 - [GitHub Repo](https://github.com/adrianskelton/repo)
 
-Family Recipe is a recipe sharing website where users can upload and share recipes as well as reading others. 
+Family Recipe is a recipe sharing website where users can upload and share recipes as well as reading others, I thought about this as I have a family recipe book from South Africa and I think it would be great to have a website where family members could share their family recipes with eachother and the world. 
+I also wanted a rating system based on the ammount of like and a comment section for recipes. 
 <br>
 
 ## Table of contents
@@ -385,6 +386,7 @@ Tests  [TESTING.md](TESTING.md).
 
 To style the forms I watched the following tutorials
 - [Style Django Forms With Bootstrap - Django Blog #5](https://www.youtube.com/watch?v=6-XXvUENY_8&ab_channel=Codemy.com)
+- [Tip for changing logo based on screen size](https://stackoverflow.com/questions/34984737/display-a-different-logo-on-mobile-and-desktop)
 
 ### Content
 asdfasdf

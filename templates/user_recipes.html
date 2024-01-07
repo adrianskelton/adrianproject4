@@ -14,6 +14,13 @@
 <p>Instructions: {{ recipe.instructions }}</p>
 
 {% if user.is_authenticated %}
+{% if user == recipe.author %}
+<!-- User is the author of the recipe, show delete button -->
+<form action="{% url 'delete_recipe' recipe.pk %}" method="post">
+  {% csrf_token %}
+  <button type="submit">Delete</button>
+</form>
+{% endif %}
 {% if user in recipe.likes.all %}
 <!-- User has liked the recipe, show unlike button -->
 <form action="{% url 'unlike_recipe' recipe.pk %}" method="post">

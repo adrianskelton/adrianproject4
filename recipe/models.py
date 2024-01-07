@@ -37,3 +37,14 @@ class like_model(models.Model):
 
     def __str__(self):
         return f"{self.title} - Likes: {self.likes.count()}, Dislikes: {self.dislikes.count()}"
+
+class Comment(models.Model):
+    email = models.EmailField()
+    name = models.CharField(max_length=50)
+    body = models.TextField()
+    post = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name='comments')
+    created = models.DateTimeField(auto_now_add=True)
+    active = models.NullBooleanField(null=True)
+
+    def __str__(self):
+        return f"Comment from {self.name} on {self.post}"

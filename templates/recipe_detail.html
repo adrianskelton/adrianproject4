@@ -1,41 +1,87 @@
 {% extends "base.html" %}
 
+
+
 {% block content %}
 
 <div class="container">
-    <h1>{{ recipe.title }}</h1>
-    <p>Country: {{ recipe.country }}</p>
-    <p>Servings: {{ recipe.servings }}</p>
-    <img src="{{ recipe.featured_image.url }}" alt="{{ recipe.title }} Image" class="img-fluid">
-    <h2>Description</h2>
-    <p>{{ recipe.description }}</p>
 
-    <h2>Ingredients</h2>
-    <p>{{ recipe.ingredients | linebreaksbr }}</p>
+    <div class="row">
 
-    <h2>Instructions</h2>
-    <p>{{ recipe.instructions | linebreaksbr }}</p>
+        <div class="col-md-6">
 
-    <p>Likes: {{ recipe.likes.count }}</p>
+            <h1>{{ recipe.title|title }}</h1>
 
-    {% if user.is_authenticated %}
-    {% if user in recipe.likes.all %}
-    <!-- User has liked the recipe, show unlike button -->
-    <form action="{% url 'unlike_recipe' recipe.pk %}" method="post">
-    {% csrf_token %}
-    <button type="submit">Unlike</button>
-    </form>
-    {% else %}
-    <!-- User has not liked the recipe, show like button -->
-    <form action="{% url 'like_recipe' recipe.pk %}" method="post">
-    {% csrf_token %}
-    <button type="submit">Like</button>
-    </form>
-    {% endif %}
-    {% else %}
-    <!-- User is not authenticated, show a message or a link to the login page -->
-    <p><a href="{% url 'login' %}">Login</a> to like this recipe.</p>
-    {% endif %}
+            <p>Country: {{ recipe.country }}</p>
+
+            <p>Servings: {{ recipe.servings }}</p>
+
+            <h2>Description</h2>
+            <p>{{ recipe.description }}</p>
+            <h2>Ingredients</h2>
+            <p>{{ recipe.ingredients | linebreaksbr }}</p>
+            <h2>Instructions</h2>
+            <p>{{ recipe.instructions | linebreaksbr }}</p>
+            <p>Likes: {{ recipe.likes.count }}</p>
+            <div class="inline-space">
+                {% if user.is_authenticated %}
+                {% if user in recipe.likes.all %}
+                <!-- User has liked the recipe, show unlike button -->
+                <form action="{% url 'unlike_recipe' recipe.pk %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit">Unlike Recipe</button>
+
+                </form>
+                {% else %}
+                <!-- User has not liked the recipe, show like button -->
+                <form action="{% url 'like_recipe' recipe.pk %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit">Like Recipe</button>
+                </form>
+                {% endif %}
+                {% else %}
+                <!-- User is not authenticated, show a message or a link to the login page -->
+                <a href="{% url 'login' %}">Login</a> to like this recipe.
+                {% endif %}
+
+            </div>
+
+            <h3>Comments</h3>
+
+            {% for comment in comments %}
+
+            <p>{{ comment.name }} says: {{ comment.body }}</p>
+
+            {% endfor %}
+
+
+
+            <h3>Add a comment</h3>
+
+            <form method="post" action="{% url 'add_comment' recipe.id %}">
+
+                {% csrf_token %}
+
+                {{ comment_form.as_p }}
+
+                <button type="submit">Submit comment</button>
+
+            </form>
+
+
+
+
+
+        </div>
+
+        <div class="col-md-6">
+
+            <img src="{{ recipe.featured_image.url }}" alt="{{ recipe.title }} Image" class="img-fluid round-image">
+
+        </div>
+
+    </div>
+
 </div>
 
 {% endblock %}

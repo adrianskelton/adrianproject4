@@ -3,6 +3,7 @@ html {
     margin-right: 10%;
 }
 
+
 body {
     background-color: #F9FAFC;
     width: 100%;
@@ -10,12 +11,13 @@ body {
 
 }
 
-h1 {
+h1, h2, h3, h4 {
     font-family: 'Josefin Sans', sans-serif;
 }
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 .hero {
@@ -69,9 +71,28 @@ header {
     border-radius: 10px;
 }
 
+.likes-count {
+    background-image: ;
+}
+
 .random-recipe-title {
     
 }
+
+.inline-space {
+    display: flex; 
+    gap: 10px;
+    align-items: center;
+}
+
+/*all recipes center menu styling*/
+.all-recipes-menu {
+    margin: 0 auto; /* Center the element horizontally */
+    width: 50%;
+    text-align: center; /* Center the text within the container */
+    background-color: #4d4d4d;
+    }
+
 
 .margins-30px {
     margin-top: 30px;
@@ -80,6 +101,15 @@ header {
 
 .latest-recipes {
     margin-top: 20px;
+    color: black;
+}
+
+.nav-link {
+    color: black;
+}
+
+.nav-link:hover {
+    color: black;
 }
 
 .nav-center {
