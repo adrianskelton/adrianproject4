@@ -1,23 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delete Recipe</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block content %}
     <h2>Delete Recipe</h2>
-    <p>Are you sure you want to delete the recipe "{{ recipe.name }}"?</p>
+
+    <p>Are you sure you want to delete the recipe "{{ recipe.title }}"?</p>
+
     <form method="post" action="{% url 'delete_recipe' pk=recipe.pk %}">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Yes, delete">
     </form>
+
     <button onclick="goBack()">Cancel</button>
+
     <script>
         function goBack() {
             window.history.back();
         }
     </script>
-</body>
-</html>
+{% endblock %}

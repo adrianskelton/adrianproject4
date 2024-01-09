@@ -1,7 +1,7 @@
 # Family Recipes
 <img src="static/images/readme/responsive.png"><br>
 - [Live Site](https://comingsoon.herokuapp.com/)
-- [GitHub Repo](https://github.com/adrianskelton/repo)
+- [GitHub Repo](https://github.com/adrianskelton/adrianproject4)
 
 Family Recipe is a recipe sharing website where users can upload and share recipes as well as reading others, I thought about this as I have a family recipe book from South Africa and I think it would be great to have a website where family members could share their family recipes with eachother and the world. 
 I also wanted a rating system based on the ammount of like and a comment section for recipes. 
@@ -250,14 +250,16 @@ The project flowcharts for the site structure was created using [LucidChart](htt
 ### 4. Skeleton<hr>
 **Wireframes**
 
-The wireframes for mobile and desktop were created with [Balsamiq](https://balsamiq.com/) tool and can be viewed <details>
+The completed site may differ slightly as this was only the inception of the sites ideas. The wireframes for mobile and desktop were created with [Balsamiq] (https://balsamiq.com/) tool and can be viewed <details>
 <summary>Here:</summary>
-Homepage<br>
-<img src="media/homepage-wireframe.png"><br>
-Login/Logout pages<br>
-<img src="media/login-logout-wireframe.png"><br>
-Submit recipe<br>
-<img src="media/submit-recipe-wireframe.png"><br>
+Homepage (guest)<br>
+<img src="static/images/readme/desktop-landing-guest.png"><br>
+Homepage (user)<br>
+<img src="static/images/readme/desktop-landing-guest.png"><br>
+Login<br>
+<img src="static/images/readme/desktop-login.png"><br>
+Register<br>
+<img src="static/images/readme/desktop-register.png"><br>
 </details><br>
 
 **Database**
@@ -277,12 +279,12 @@ The project uses ElephantSQL as PostgreSQL relational database for storing the d
 
 <img src="media/fonts.png" width="60%">
 
-- The colors used were based on the the colors in the logo.
-  - #color1
-  - #color2
-  - #color3
+- The colors used were based on the the colors in the logo and the hero image tomato color that stood out to me. I chose the primary color to invoke a feeling of warmth of sharing recipes and it matched the heart color as part of the logo. 
+  - #7E180D color1
+  - #FFFFFF color2 
+  - #313131 color3
 
-<img src="media/color-palette2.png" width="60%">
+<img src="static/images/readme/palette.png" width="60%">
 
 #### Visual Effects
 
@@ -294,8 +296,12 @@ Footer<br>
 
 
 **Logo**<br>
-Logo with effect when hovered<br>
-<img src="media/interactive-logo.gif" width="40%"><br>
+
+<img src="static/images/readme/logo-mobile.png" width="40%"><br>
+Mobile logo
+<br>
+<img src="static/images/readme/logo-desktop.png" width="40%"><br>
+Desktop logo
 
 ## Features
 
@@ -333,11 +339,14 @@ The bootstrap grid system and flexbox was used to create a fully responsive layo
 **Tested devices:**
 
 - iPhone 13
+- Google pixel 4
+- Huawei matebook 14 
 
 
 ## Tools Used
 
 - [GitHub](https://github.com/) for hosting 
+- [Color palette generator](https://coolors.co/7e180d-ffffff-313131) for generating color palette
 
 
 

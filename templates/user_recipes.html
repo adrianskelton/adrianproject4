@@ -6,7 +6,7 @@
 {% for recipe in user_recipes %}
 <div class="recipe-item row">
 <div class="col-md-6">
-<h2>{{ recipe.title }}</h2>
+<h2>{{ recipe.title|title }}</h2>
 <p>Country: {{ recipe.country }}</p>
 <p>Author: {{ recipe.author.username }}</p>
 <p>Description: {{ recipe.description }}</p>
@@ -15,7 +15,10 @@
 
 {% if user.is_authenticated %}
 {% if user == recipe.author %}
-<!-- User is the author of the recipe, show delete button -->
+<!-- User is the author of the recipe, show delete and edit button -->
+<form action="{% url 'edit_recipe' recipe.pk %}" method="get">
+  <button type="submit">Edit</button>
+  </form>
 <form action="{% url 'delete_recipe' recipe.pk %}" method="post">
   {% csrf_token %}
   <button type="submit">Delete</button>

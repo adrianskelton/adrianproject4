@@ -1,3 +1,9 @@
+/*sites color pallette
+white: #ffffff
+barn red: #7e180d
+jet black: #313131
+*/
+
 html {
     margin-left: 10%;
     margin-right: 10%;
@@ -8,7 +14,7 @@ body {
     background-color: #F9FAFC;
     width: 100%;
     align-self: center;
-
+    color: #313131;
 }
 
 h1, h2, h3, h4 {
@@ -20,9 +26,19 @@ a {
     color: black;
 }
 
+.welcome-paragraph {
+    padding-top: 10px;
+}
+
 .hero {
     width: 100%;
     height: auto;
+}
+
+/*primary color button*/
+.btn-primaryred {
+    background-color: #7e180d;
+    color: white !important;
 }
 
 .crimson {
@@ -44,7 +60,7 @@ a {
 }
 
 .dark-bg {
-    background-color: #4d4d4d;
+    background-color: #dbdbdb;
 }
 
 .logo {
@@ -87,10 +103,10 @@ header {
 
 /*all recipes center menu styling*/
 .all-recipes-menu {
-    margin: 0 auto; /* Center the element horizontally */
+    margin: 0 auto; 
     width: 50%;
-    text-align: center; /* Center the text within the container */
-    background-color: #4d4d4d;
+    text-align: center; 
+    text-decoration: underline;
     }
 
 
@@ -132,6 +148,25 @@ header {
       display: none;
       max-height: 180px;
     }
+
+    html {
+        margin: 0;
+    }
   }
 
 /* For tablet screen sizes */
+
+@media (max-width: 979px) {
+    .logo .mobile {
+      display: block;
+      max-height: 180px;
+    }
+    .logo .desktop {
+      display: none;
+      max-height: 180px;
+    }
+
+    html {
+        margin: 0;
+    }
+  }

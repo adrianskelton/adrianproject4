@@ -4,8 +4,6 @@ from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.core.validators import MaxValueValidator
 
-# Create your models here.
-
 STATUS = ((0, "Draft"), (1, "Published"))
 
 class Recipe(models.Model):
@@ -44,7 +42,7 @@ class Comment(models.Model):
     body = models.TextField()
     post = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name='comments')
     created = models.DateTimeField(auto_now_add=True)
-    active = models.NullBooleanField(null=True)
+    active = models.BooleanField(null=True)
 
     def __str__(self):
         return f"Comment from {self.name} on {self.post}"
