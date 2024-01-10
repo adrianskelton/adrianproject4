@@ -33,7 +33,9 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+ 
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ['familyrecipe-66825c6657db.herokuapp.com', '8000-adrianskelt-adrianproje-6x6d12uhoi7.ws-eu106.gitpod.io', '8000-adrianskelt-adrianproje-6x6d12uhoi7.ws-eu107.gitpod.io']
 ["family_recipe.herokuapp.com", "project4"]    
