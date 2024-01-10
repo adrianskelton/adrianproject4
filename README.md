@@ -250,7 +250,7 @@ The project flowcharts for the site structure was created using [LucidChart](htt
 ### 4. Skeleton<hr>
 **Wireframes**
 
-The completed site may differ slightly as this was only the inception of the sites ideas. The wireframes for mobile and desktop were created with [Balsamiq] (https://balsamiq.com/) tool and can be viewed <details>
+The completed site may differ slightly as this was only the inception of the sites ideas. The wireframes for mobile and desktop were created with [Balsamiq](https://balsamiq.com/) tool and can be viewed <details>
 <summary>Here:</summary>
 Homepage (guest)<br>
 <img src="static/images/readme/desktop-landing-guest.png"><br>
@@ -263,10 +263,10 @@ Register<br>
 </details><br>
 
 **Database**
-The project uses ElephantSQL as PostgreSQL relational database for storing the data.
+The project uses ElephantSQL as PostgreSQL relational database for storing the data. I used lucidcharts to display the relationships to the different database tables. The main relationships were based on the likes model as these were called both in the recipe model to show the total likes and related back to the unique users, and then also the users liked recipes.
 <details>
   <summary>Model</summary>
-  <img src="media/database-schema.png"><br>
+  <img src="static/images/readme/database.png"><br>
 </details><br>
 
 ### 5. Surface<hr>
@@ -275,11 +275,13 @@ The project uses ElephantSQL as PostgreSQL relational database for storing the d
 
 - The fonts used for this site were imported from [Google Fonts](https://fonts.google.com/):
   - Josefin for the headings
+  <img src="static/images/readme/font-josefin.png">
   - Crimson for the body
+  <img src="static/images/readme/font-crimson.png">
 
-<img src="media/fonts.png" width="60%">
 
-- The colors used were based on the the colors in the logo and the hero image tomato color that stood out to me. I chose the primary color to invoke a feeling of warmth of sharing recipes and it matched the heart color as part of the logo. 
+
+- The colors used were based on the the colors in the logo and the hero image tomato color that stood out to me. I chose the primary color to invoke a feeling of warmth of sharing recipes with community and it matched the heart color as part of the logo. 
   - #7E180D color1
   - #FFFFFF color2 
   - #313131 color3
@@ -289,26 +291,37 @@ The project uses ElephantSQL as PostgreSQL relational database for storing the d
 #### Visual Effects
 
 **Hover effects**<br>
-NavBar<br>
-<img src="media/nav-hover.gif" width="100%"><br>
-Footer<br>
-<img src="media/footer-hover.gif" width="100%"><br>
+NavBar desktop<br>
+<img src="static/images/readme/navbar-desktop.png" width="100%"><br>
+Navbar smaller screens<br>
+- The navbar is at the top right of every page. 
+- If the user is logged in or is a guest the menu content changes appropriately. 
+- The hamburger menu is applied on media breakpoint of 979px. This was when the text from the navbar started going into the family recipe logo and looked cluttered.
+- I kept the menu clean with no additional styling to focus attention on the recipes and content instead.
 
+<img src="static/images/readme/navbar-hamburger.png" width="100%"><br>
+
+**Footer**<br>
+
+The footer is 
 
 **Logo**<br>
 
-<img src="static/images/readme/logo-mobile.png" width="40%"><br>
+<img src="static/images/readme/logo-mobile.png"><br>
 Mobile logo
 <br>
 <img src="static/images/readme/logo-desktop.png" width="40%"><br>
 Desktop logo
+<br>
+<img src="static/images/readme/video-navbar.mov" width="40%"><br>
+Video showing responsiveness of menu
 
 ## Features
 
 ### Existing Features
 
 #### Recipe Modal
-lorum ipsum
+The 
 
 ##### Recipe List
 Each recipe is displayed on a card on the account home page and contains:
@@ -327,7 +340,7 @@ lorumipsum
 lorumipsum
 
 ##### Change Password
-Users can change their password from the account panel in the account home page.
+Users can change their password from the account panel in the account home page. 
 
 ### Potential Future Features
 - Allow admin users to edit the services from the account home rather than from the django backend panel

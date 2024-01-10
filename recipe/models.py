@@ -4,8 +4,6 @@ from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.core.validators import MaxValueValidator
 
-STATUS = ((0, "Draft"), (1, "Published"))
-
 class Recipe(models.Model):
     """
     My Recipe model to publish recipes
