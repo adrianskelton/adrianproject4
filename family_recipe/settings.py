@@ -14,7 +14,6 @@ from pathlib import Path
 import os
 import dj_database_url
 import cloudinary_storage
-
 if os.path.isfile("env.py"):
    import env
 
@@ -29,7 +28,8 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'p^khu+@n0t6#ylz5%r3f^j9movp6qi=xqkn+9glg45b+z7cugy'
+#SECRET_KEY = 'p^khu+@n0t6#ylz5%r3f^j9movp6qi=xqkn+9glg45b+z7cugy'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -90,12 +90,8 @@ WSGI_APPLICATION = 'family_recipe.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
+     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+ }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

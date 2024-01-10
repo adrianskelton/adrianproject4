@@ -310,10 +310,10 @@ The footer is
 <img src="static/images/readme/logo-mobile.png"><br>
 Mobile logo
 <br>
-<img src="static/images/readme/logo-desktop.png" width="40%"><br>
+<img src="static/images/readme/logo-desktop.png"><br>
 Desktop logo
 <br>
-<img src="static/images/readme/video-navbar.mov" width="40%"><br>
+<video controls src="static/images/readme/video-navbar.mov" width="100%"><br>
 Video showing responsiveness of menu
 
 ## Features
