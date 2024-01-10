@@ -60,7 +60,7 @@ a {
 }
 
 .dark-bg {
-    background-color: #dbdbdb;
+    background-color: #8d8c8c;
 }
 
 .logo {
@@ -81,6 +81,10 @@ header {
     max-height: 150vh;
 }
 
+.recipe-item {
+    background-color: #d3d3d3;
+}
+
 .random-image {
     width: auto;
     max-height: 300px;
@@ -89,10 +93,6 @@ header {
 
 .likes-count {
     background-image: ;
-}
-
-.random-recipe-title {
-    
 }
 
 .inline-space {

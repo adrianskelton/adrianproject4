@@ -1,6 +1,6 @@
 # Family Recipes
 <img src="static/images/readme/responsive.png"><br>
-- [Live Site](https://comingsoon.herokuapp.com/)
+- [Live Site](https://familyrecipe-66825c6657db.herokuapp.com/)
 - [GitHub Repo](https://github.com/adrianskelton/adrianproject4)
 
 Family Recipe is a recipe sharing website where users can upload and share recipes as well as reading others, I thought about this as I have a family recipe book from South Africa and I think it would be great to have a website where family members could share their family recipes with eachother and the world. 
@@ -360,7 +360,7 @@ The bootstrap grid system and flexbox was used to create a fully responsive layo
 
 - [GitHub](https://github.com/) for hosting 
 - [Color palette generator](https://coolors.co/7e180d-ffffff-313131) for generating color palette
-
+- [Cloudconvert](https://cloudconvert.com/webm-to-mov) for converting the video from webm to mov
 
 
 ### Python packages
