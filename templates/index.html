@@ -37,7 +37,6 @@ You can view, edit and delete your recipes that you have submitted.
 <p>Country: {{ recipe.country|title }}</p>
 <p>Author: {{ recipe.author.username }}</p>
 <p class="likes-count">Likes: {{ recipe.likes.count }}</p>
-<!-- Add more details as needed -->
 <p><a href="{% url 'recipe_detail' recipe.id %}" class="read-more-btn">Read More</a></p>
 </div>
 </div>
