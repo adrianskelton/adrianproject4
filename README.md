@@ -230,21 +230,16 @@ The choice of colors depends on the background image chosen for home, sign up, l
 
 ![image](static/images/readme/palette.png)
 
- - **`9AA5AF`** is the primary color used throughout the pages:
+ - **`313131`** is the primary color used throughout the pages:
    - Welcome message.
    - Category boxes on the home page.
-   - Recipe cards.
    - Add | Edit recipe forms.
    - Sign Up | Login | Logout forms.
    - Confirmation message when choosing to delete a recipe.
-  
- - **`BAA6B1`** is used to style the navbar, the footer and the "View Recipe" button.
-
- - **`000000`** is the primary text color used throughout the pages.
 
  - **`850000`** is used for links and hover styling on navbar and footer. The color was chosen with the help of [Color Contrast Analyzer](https://dequeuniversity.com/rules/axe/4.7/color-contrast) (provided by Lighthouse testing) in order for background and foreground colors to have a sufficient contrast ratio.
 
- - **`E1DDDD`** is used as the background color for all recipe-related pages including recipes, recipe details, add recipe, edit recipe and categories.
+ - **`FFFFFF`** is used as the background color for all recipe-related pages including recipes, recipe details, add recipe, edit recipe and categories.
 
 #### Button styling
 
@@ -263,35 +258,35 @@ I went with following colors:
 
 - Sign up: 
     
-  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697633861/static/images/sign_up_button.0940135d3c68.png)
+  ![image]()
 
 - Sign in:
    
-  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697633870/static/images/sign_in_button.fbfe033373f6.png)
+  ![image]()
   
 - Logout:
 
-  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1698070747/logout_buttons_hr62xk.png)
+  ![image]()
 
 - Add a recipe:
 
-  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697633871/static/images/buttons_add_a_recipe_form.214a4d7e1147.png)
+  ![image]()
 
 - Update a recipe:
 
-  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697633873/static/images/buttons_update_a_recipe.e9fd1ac91f38.png)
+  ![image]()
 
 - Delete confirmation:
 
-  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697633865/static/images/buttons_delete_recipe.1baafc8c42e4.png)
+  ![image]()
 
 - Edit | Delete:
 
-  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697633882/static/images/buttons_edit_delete.e24beb2a6eb9.png)
+  ![image]()
 
 - Submit (when leaving a comment):
 
-  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1698070830/submit_button_ia096k.png)
+  ![image]()
 
 </details>
 
