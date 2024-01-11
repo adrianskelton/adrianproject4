@@ -17,6 +17,10 @@ body {
     color: #313131;
 }
 
+footer {
+    margin-bottom: 0;
+}
+
 h1, h2, h3, h4 {
     font-family: 'Josefin Sans', sans-serif;
 }
@@ -28,6 +32,24 @@ a {
 
 .welcome-paragraph {
     padding-top: 10px;
+}
+
+.read-more-btn {
+    display: inline-block;
+    padding: 10px 20px; 
+    background-color: #7e180d; 
+    color: #fff; 
+    text-decoration: none;
+    border: 1px solid #7e180d; 
+    border-radius: 5px; 
+    transition: background-color 0.3s, color 0.3s, border 0.3s; 
+
+}
+
+.read-more-btn:hover {
+    background-color: #9b271a; 
+    border-color: #b3b3b3; 
+    color: #fff; 
 }
 
 .hero {
