@@ -34,7 +34,7 @@ a {
     padding-top: 10px;
 }
 
-.read-more-btn {
+.custom-btn {
     display: inline-block;
     padding: 10px 20px; 
     background-color: #7e180d; 
@@ -46,7 +46,7 @@ a {
 
 }
 
-.read-more-btn:hover {
+.custom-btn:hover {
     background-color: #9b271a; 
     border-color: #b3b3b3; 
     color: #fff; 

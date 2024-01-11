@@ -445,21 +445,18 @@ Video showing responsiveness of menu and change to hamburger menu at media break
 
 #### Sign Up
 
-![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697376101/static/images/sign_up_form.f49ed81b91fc.png)
+![image](static/images/readme/signup.png)
 
 - The form enables users to register and create an account.
-
 - The form includes following fields:
   - Username
   - Email
   - Password
   - Password (again)
 
-- Email field is optional.
-
 #### Login
 
-![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697376103/static/images/sign_in_form.9a00efc66dfb.png)
+![image](static/images/readme/login.png)
 
 - The form enables users to log in.
 
