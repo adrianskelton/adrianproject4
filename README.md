@@ -3,8 +3,9 @@
 - [Live Site](https://familyrecipe-66825c6657db.herokuapp.com/)
 - [GitHub Repo](https://github.com/adrianskelton/adrianproject4)
 
-Family Recipe is a recipe sharing website where users can upload and share recipes as well as reading others, I thought about this as I have a family recipe book from South Africa and I think it would be great to have a website where family members could share their family recipes with eachother and the world. 
-I also wanted a rating system based on the ammount of like and a comment section for recipes. 
+Family Recipe is a recipe sharing website made for my Portfolio Project 4 for code institute, where users can upload and share recipes as well as reading recipes from other users.
+
+I thought about this as I have a family recipe book from South Africa and I think it would be great to have a website where family members could share their family recipes with eachother and the world. I also wanted a rating system based on the ammount of likes and a comment section for recipes. 
 <br>
 
 ## Table of contents
@@ -17,7 +18,7 @@ lorumipsum
 Five Planes Of Website Design:<br>
 ### 1. Strategy<hr>
 
-To create a website with good UI and UX 
+To create a website with good UI and UX I interviewed my sister in France who is a chef and asked her what her thoughts were on a recipe sharing website and also got insight to what she would want to use the site for. There are many future features that will later be introduced and enhancements that I did not get around to implementing just yet but these will be reflected in the user stories section.
 
 - Project Setup
   - Create 
