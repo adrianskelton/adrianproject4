@@ -1,409 +1,620 @@
-# Family Recipes
-<img src="static/images/readme/responsive.png"><br>
-- [Live Site](https://familyrecipe-66825c6657db.herokuapp.com/)
-- [GitHub Repo](https://github.com/adrianskelton/adrianproject4)
+# Family Recipe
 
-Family Recipe is a recipe sharing website made for my Portfolio Project 4 for code institute, where users can upload and share recipes as well as reading recipes from other users.
+"Family Recipe" is a recipe sharing website made for my Portfolio Project 4 for code institute, where users can upload and share recipes as well as reading recipes from other users.
 
 I thought about this as I have a family recipe book from South Africa and I think it would be great to have a website where family members could share their family recipes with eachother and the world. I also wanted a rating system based on the ammount of likes and a comment section for recipes. 
-<br>
 
-## Table of contents
+![image](static/images/readme/responsive.png)
+
+Click [here](https://familyrecipe-66825c6657db.herokuapp.com/) to view the live site.
+
+# Table of Contents
+- [Database Diagram](#database-diagram)
+  - [Planning](#planning)
+  - [Final Result](#final-result)
+
+- [User Experience](#user-experience)
+  - [Agile](#agile)
+  - [Strategy](#strategy)
+  - [Scope](#scope)
+  - [Structure](#structure)
+  - [Skeleton](#skeleton)
+  - [Surface](#surface)
+
+- [Technologies Used](#technologies-used)
+  - [Languages](#languages)
+  - [Frameworks, Libraries and Programs](#frameworks-libraries-and-programs)
+
+- [Features](#features)
+  - [Existing Features](#existing-features)
+  - [Future Features](#future-features)
+
+- [Testing and Validation](#testing-and-validation)
+  
+- [Fixed Bugs](#fixed-bugs)
+
+- [Known Issues](#known-issues)
+
+- [Credits](#credits)
+  - [Media](#media)
+  - [Content](#content)
+  - [Acknowledgements](#acknowledgements)
+
+- [Deployment](#deployment)
+
+- [Development](#development)
+  - [Fork](#fork)
+  - [Clone](#clone)
+
+  
+## Database Diagram
+
+The project uses ElephantSQL as PostgreSQL relational database for storing the data. I used lucidcharts to display the relationships to the different database tables. The main relationships were based on the likes model as these were called both in the recipe model to show the total likes and related back to the unique users, and then also the users liked recipes.
+
+### Planning
+
+![image](static/images/readme/database.png)
 
 
-## Overview
-lorumipsum
+#### Recipe Model
+  - This is the main model for the website to function. I based this off the walkthrough I think therefore I blog. Adjusted the layout a bit to fit the website function as a worldwide sharing platform for recipes in mind.
 
-## UX
-Five Planes Of Website Design:<br>
-### 1. Strategy<hr>
+#### Comment Model
+ - The comment model allows logged in users to 
 
-To create a website with good UI and UX I interviewed my sister in France who is a chef and asked her what her thoughts were on a recipe sharing website and also got insight to what she would want to use the site for. There are many future features that will later be introduced and enhancements that I did not get around to implementing just yet but these will be reflected in the user stories section.
+#### Category Model
+  - The custom model.
+  - Enable users to place recipes in different categories.
+  - Make it possible to "sort" recipes by categories.
 
-- Project Setup
-  - Create 
+[Back to top ⇧](#table-of-contents)
 
-- UX
-  - Favicon logo
 
-- Navigation
-  - lorumipsum
+## User Experience
 
-- CRUD
-  - lorumipsum
-- Authentication
-  - lorumipsum
-- Validation
-  - lorumipsum
-- Administration
-  - lorumipsum
-- Deployment
-  - lorumipsum
-- Testing
-  - lorumipsum
-- Documentation
-  - lorumipsum
+To create a website with good UI and UX I interviewed my sister in France who is a chef and asked her what her thoughts were on a recipe sharing website and also got insight to what she would want to use the site for. 
 
-<br>
+There are many future features that will later be introduced and enhancements that I did not get around to implementing just yet but these will be reflected in the user stories section.
 
-**Agile Methodology**<br><br>
-I used Agile methodology.<br>
-I used [GitHub](https://github.com/) for all the user stories and epics. As the user stories were accomplished, they were moved in the GitHub Kanban board from **ToDo**, to **In Progress**, **Done** and **Not Implemented** lists.
-The board can be viewed [here](https://github.com/users/adrianskelton/projects/5/).
+### Agile
 
-**Kanban Board**<br><br>
-<img src="media/kanban.png"><br><br>
+I employed the agile methodology, starting from the planning stage and continuing until the final product was built. To ensure that I stayed organized and on track, I utilized a GitHub project and a [Kanban board](https://github.com/users/adrianskelton/projects/5/views/2). Information about User Stories can be found in the subsection below⇩ 
+
+**Five planes of User Experience:**
+
+### Strategy
+
+My User Stories can be found [here](https://github.com/adrianskelton/adrianproject4/issues). All User Stories include:
+ - Acceptance Criteria
+ - Tasks
+ - Labels (MoSCoW Priotarization)
+
+Some of the User Stories are part of an EPIC.
+
+Please, go to [TESTING.md](TESTING.md) if you want to come to the section where I test my User Stories.
+
+#### Key Project Goal
+
+The key goal of the website is to create a platform where users can create an account and share recipes as well as viewing recipes shared by other users.
+
+#### Target Audience
+
+The target audience is primarily people who have family recipes that they are proud of and want to share with the world but also anyone that likes to cook and who wants new and different recipes to try out from around the world. That is why I added country as an option to the recipe model as well as the like function so that users could see how the recipes were rated.
+
+#### User Requirements and Expectations:
+
+- Easy navigation throughout the site.
+
+- Uncomplicated user experience to login and handle recipe creation and modification.
+
+- Responsive and informative feedback on the site (comments and likes).
+
+- Capability to access the site across various electronic devices.
+
+- Fully working links and functionality.
+
+
+### Scope
+
+#### Content | Functionality Requirements:
+
+- Easily accessible navigation bar with the links that have easily understandable names.
+
+- Responsive design.
+
+- A brief and simple description of the site’s purpose.
+
+- A complete collection of recipes.
+
+- A thorough list of ingredients and step-by-step instructions to follow.
+
+- A possibility to see what country the recipe is from.
+
+- A possibility to read comments.
+
+#### Authentication:
+
+- Add registration/login features that give the user access to extra functionality.
+
+- Add Logout functionality for security reasons.
+
+#### Functionality for logged-in users:
+
+  - **CRUD functionality:**
+
+    - Implement feature that allows user to **C**reate recipes.
+
+    - Implement feature that allows user to **R**ead recipes.
+
+    - Implement feature that allows user to **U**pdate recipes.
+
+    - Implement feature that allows user to **D**elete recipes.
+
+  - **Comment and like feature:**
+
+    - Enable logged-in users to post comments on any of the published recipes.
+
+    - Enable logged-in users to like/unlike published recipes.
+
+
+### Structure
+
+The blog is divided into different pages. Some of the pages are accessible only for logged in users. The blog structure allows users to access recipes via the recipes page or by sorting them through different categories. All users can access detailed information about each recipe by clicking on the recipe card. Users who are logged in can publish, edit, and delete their own recipes, and interact with other recipes by liking and commenting on them.
+
+**For detailed information about all existing features see the section [Existing Features](#existing-features).**
+
+
+### Skeleton
+
+I created wireframes using [Figma](https://www.figma.com/).
 
 <details>
-<summary>Sprint 1: Base Setup</summary>
+<summary>Home page</summary>
 
-|EPIC|User Story|Description|
-|:--|:--|:--|
-|Project Setup|Project setup|As a developer, I need to set up the project so that it is ready for implementing the core features.|
+LEFT: all users | RIGHT: logged-in users.
 
-</details><br>
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1698070413/wireframes_home_page_yzr4qc.png)
 
-<details>
-<summary>Sprint 2: Navigation & Account Creation</summary>
-
-|EPIC|User Story|Description|
-|:--|:--|:--|
-|**Project Setup**|||
-|Navigation|Navbar|As a developer I need to create a navbar so that users can navigate the site.|
-
-</details><br>
-
-<details>
-<summary>Sprint 3: Styling</summary>
-
-|EPIC|User Story|Description|
-|:--|:--|:--|
-|CRUD|Create a recipe|As a logged in user I create a recipe.|
-
-</details><br>
-
-<details>
-<summary>Sprint 4: CRUD</summary>
-
-|EPIC|User Story|Description|
-|:--|:--|:--|
-|CRUD|Delete recipe|As a logged in user I can delete a recipe.|
-
-</details><br>
-
-<details>
-<summary>Sprint 5: Search & Email</summary>
-
-|EPIC|User Story|Description|
-|:--|:--|:--|
-|Administration|Admin search|As an admin I can filter and search the recipes so that I can find more relevant recipes easily.|
-
-</details><br>
-
-<details>
-<summary>Sprint 6: Testing & Documentation</summary>
-
-|EPIC|User Story|Description|
-|:--|:--|:--|
-|Testing|Unit Tests|As a developer I need to use testing so that I an sure my code is free of bugs and will not result in site errors.|
-
-</details><br>
-
-### 2. Scope<hr>
-**Simple and Intuitive UX**<br>
-- Create a website that makes people want to share and read recipes.
-
-
-**Relevant Content**<br>
-- Make all the content easily accessible
-
-
-**Responsiveness**<br>
-- Create a responsive website that works on every device and screen size.<br><br>
-
-### 3. Structure<hr>
-The website is designed with the user in mind and has the pages listed below:
-- Landing page
-  - Recipes
-  - Login
-- Account Home
-
-There are also 2 pages available to users who are signed in:
-- Submit Recipes
-- Login
-
-
-#### Navigation
-
-The navbar is bootstrap .
-All users will see:
-- lorum ipsum
-
-A user who isn't signed in will see:
-- lorum ipsum
-
-<img src="media/navbar_guest.png" alt=""><br>
-
-A user who is signed in will see:
-- My Account
-- Logout
-
-<img src="media/signed-in-navbar.png" alt=""><br>
-
-Hamburger menu image.<br>
-<img src="media/hamburger-menu.gif" alt=""><br>
-
-Hover effect of links.<br>
-<img src="media/nav-hover.gif" alt=""><br>
-
-#### Footer
-
-The footer is the same across all the pages and includes:
-- Social Media Icons (Facebook, Instagram, Github)
-- A copyright statement
-
-Link hover effect to show the link is active.<br>
-<img src="media/footer-hover.gif" alt="Video of the footer" width="100%"><br>
-
-#### Pages
-
-##### Landing Page
-
-The landing page is divided into 4 sections:
-- Hero Image  Logo
-- Recipe section
-
-
-##### Sign Up Page
-
-<img src="media/.png" alt="" width="60%"><br>
-
-This page uses the allauth template as a base with custom design added.
-The username and password fields are mandatory but the email is optional. If the user signs up with and includes and email address they will be sent email updates on:
-- lorum ipsum
-
-
-##### Sign In Page
-
-<img src="media/log-in-page.png" alt="e" width="60%"><br>
-
-This page 
-
-##### Account Home Page
-
-<img src="media/account-home.png" alt="Image of the account home page"><br>
-
-This page shows the users recipes.
-On a large screen it is divided into 2 sections:
-- lorum ipsum
-
-
-
-
-lorum
-
-##### Admin Account Home Page
-<img src="media/search-recipes.png" alt="Image of the admin search panel" width="60%"><br>
-The account home page for an Admin user has the addition of a Search recipes panel giving the admin user the ability to search by:
-- Date of recipe
-- Username
-
-If the number of recipes exceeds 25 the page paginates.<br>
-
-##### Submit Recipte
-
-The Submit recipe has 6 inputs:
-- A name of the recipe
-- The country of origin
-- Description
-- Cooking instructions
-- Ingredients list
-
-The form has built in validation to alert the user if:
-- There are fields missing
-
-Once a recipe has been successfully added the user is taken back to the user account page and a message saying "recipe saved" will dissapear after 5 seconds.<br>
-
-<img src="media/recipe.gif" alt=""><br>
-
-
-User's View<br>
-<img src="media/user.png" alt="Image of" width="70%"><br>
-Admin's View<br>
-<img src="media/admin.png" alt="Image " width="70%"><br>
-
-##### Update Recipe
-
-If the user clicks on the edit recipe button recipe detail page they are then taken to the recipe selected to edit and save again.
-Once a recipe has been successfully edited the user is taken back to the user account page and a message saying "recipe saved" will dissapear after 5 seconds.<br>
-
-##### Confirm Delete Recipe Page
-<img src="media/confirm-delete-recipe.png" alt="" width="60%"><br>
-If the user clicks on the 'Delete Recipe' they will be asked if they are sure they want to delete it.
-
-#### Sitemap
-The project flowcharts for the site structure was created using [LucidChart](https://www.lucidchart.com/).
-<details>
-<summary>Sitemap:</summary>
-<img src="media/sitemap.png"><br>
 </details>
 
-### 4. Skeleton<hr>
-**Wireframes**
-
-The completed site may differ slightly as this was only the inception of the sites ideas. The wireframes for mobile and desktop were created with [Balsamiq](https://balsamiq.com/) tool and can be viewed <details>
-<summary>Here:</summary>
-Homepage (guest)<br>
-<img src="static/images/readme/desktop-landing-guest.png"><br>
-Homepage (user)<br>
-<img src="static/images/readme/desktop-landing-guest.png"><br>
-Login<br>
-<img src="static/images/readme/desktop-login.png"><br>
-Register<br>
-<img src="static/images/readme/desktop-register.png"><br>
-</details><br>
-
-**Database**
-The project uses ElephantSQL as PostgreSQL relational database for storing the data. I used lucidcharts to display the relationships to the different database tables. The main relationships were based on the likes model as these were called both in the recipe model to show the total likes and related back to the unique users, and then also the users liked recipes.
 <details>
-  <summary>Model</summary>
-  <img src="static/images/readme/database.png"><br>
-</details><br>
+<summary>Recipe page</summary>
 
-### 5. Surface<hr>
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1698070413/wireframes_recipes_page_ab1x0w.png)
 
-#### Color Scheme and Fonts
+</details>
 
-- The fonts used for this site were imported from [Google Fonts](https://fonts.google.com/):
-  - Josefin for the headings
-  <img src="static/images/readme/font-josefin.png">
-  - Crimson for the body
-  <img src="static/images/readme/font-crimson.png">
+<details>
+<summary>Recipe detail page</summary>
 
+LEFT: all users | RIGHT: logged-in users.
 
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1698070413/wireframes_recipe_detail_page_xrr53z.png)
+
+</details>
+
+<details>
+<summary>Add a Recipe page</summary>
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1698070413/wireframes_add_a_recipe_page_r1ea4a.png)
+
+</details>
+
+<details>
+
+<summary>Sign Up</summary>
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1698070605/wireframes_sign_up_xvkbyi.png)
+
+</details>
+
+<details>
+<summary>Login</summary>
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1698070413/wireframes_sign_in_jds4rh.png)
+
+</details>
+
+<details>
+<summary>Logout</summary>
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1698070413/wireframes_sign_out_eahchw.png)
+
+</details>
+
+### Surface
+
+#### Colour Scheme
+
+The choice of colors depends on the background image chosen for home, sign up, login, and logout pages.
+
+![image](static/images/readme/palette.png)
+
+ - **`9AA5AF`** is the primary color used throughout the pages:
+   - Welcome message.
+   - Category boxes on the home page.
+   - Recipe cards.
+   - Add | Edit recipe forms.
+   - Sign Up | Login | Logout forms.
+   - Confirmation message when choosing to delete a recipe.
+  
+ - **`BAA6B1`** is used to style the navbar, the footer and the "View Recipe" button.
+
+ - **`000000`** is the primary text color used throughout the pages.
+
+ - **`850000`** is used for links and hover styling on navbar and footer. The color was chosen with the help of [Color Contrast Analyzer](https://dequeuniversity.com/rules/axe/4.7/color-contrast) (provided by Lighthouse testing) in order for background and foreground colors to have a sufficient contrast ratio.
+
+ - **`E1DDDD`** is used as the background color for all recipe-related pages including recipes, recipe details, add recipe, edit recipe and categories.
+
+#### Button styling
+
+All buttons throughout the pages have the same styling, ensuring uniformity and providing a seamless user experience. 
+ 
+I went with following colors:
+  - `GREEN` that usually is associated with "YES" | "SAVE" | "OK".
+  - `#850000` that usually is associated with "NO" | "CANCEL" | "GO BACK".
+  - `WHITE` for the text in order to get a sufficient contrast ratio.
+
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697633882/static/images/buttons_edit_delete.e24beb2a6eb9.png)
+  
+<details>
+
+<summary>Click here to see all the buttons</summary>
+
+- Sign up: 
+    
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697633861/static/images/sign_up_button.0940135d3c68.png)
+
+- Sign in:
+   
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697633870/static/images/sign_in_button.fbfe033373f6.png)
+  
+- Logout:
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1698070747/logout_buttons_hr62xk.png)
+
+- Add a recipe:
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697633871/static/images/buttons_add_a_recipe_form.214a4d7e1147.png)
+
+- Update a recipe:
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697633873/static/images/buttons_update_a_recipe.e9fd1ac91f38.png)
+
+- Delete confirmation:
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697633865/static/images/buttons_delete_recipe.1baafc8c42e4.png)
+
+- Edit | Delete:
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697633882/static/images/buttons_edit_delete.e24beb2a6eb9.png)
+
+- Submit (when leaving a comment):
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1698070830/submit_button_ia096k.png)
+
+</details>
+
+#### Recipe images:
+
+Users have the option to upload images in various sizes. To ensure consistency, I made sure that all recipe cards on the same line had the same height. The size of the images doesn't affect the layout of the recipe detail page. All sections are uploaded correctly as they should be.
+
+![image](static/images/readme/palette.png)
 
 - The colors used were based on the the colors in the logo and the hero image tomato color that stood out to me. I chose the primary color to invoke a feeling of warmth of sharing recipes with community and it matched the heart color as part of the logo. 
   - #7E180D color1
   - #FFFFFF color2 
   - #313131 color3
 
-<img src="static/images/readme/palette.png" width="60%">
+#### Typography
 
-#### Visual Effects
+[Google Fonts](https://fonts.google.com/) was used to import the chosen fonts in use for the site.
 
-**Hover effects**<br>
-NavBar desktop<br>
-<img src="static/images/readme/navbar-desktop.png" width="100%"><br>
-Navbar smaller screens<br>
-- The navbar is at the top right of every page. 
-- If the user is logged in or is a guest the menu content changes appropriately. 
-- The hamburger menu is applied on media breakpoint of 979px. This was when the text from the navbar started going into the family recipe logo and looked cluttered.
-- I kept the menu clean with no additional styling to focus attention on the recipes and content instead.
 
-<img src="static/images/readme/navbar-hamburger.png" width="100%"><br>
+- I have used **"Josefin"** for all the headings.
 
-**Footer**<br>
+  ![image](static/images/readme/font-josefin.png)
 
-The footer is 
+- For the paragraphs I went with **"Crimson"**
 
-**Logo**<br>
+  ![image](static/images/readme/font-crimson.png)
 
-<img src="static/images/readme/logo-mobile.png"><br>
-Mobile logo
-<br>
-<img src="static/images/readme/logo-desktop.png"><br>
-Desktop logo
-<br>
-<video controls src="static/images/readme/video-navbar.mov" width="100%"><br>
-Video showing responsiveness of menu
+[Back to top ⇧](#table-of-contents)
+
+## Technologies Used
+
+### Languages
+ 
+  - HTML
+  - CSS
+  - Python
+  - JavaScript
+
+### Frameworks, Libraries and Programs
+
+  - [Django](https://www.djangoproject.com/)
+   
+  - [Django-Allauth](https://docs.allauth.org/en/latest/)
+    - used for User authenticaion (sign up, sign in and sign out features).
+
+  - [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+    - used to control rendering behaviour of Django forms.
+
+  - [Gunicorn](https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/gunicorn/)
+    - Python HTTP server for WSGI applications.
+  
+  - [ElepantSQL](https://www.elephantsql.com/)
+    - Database platform used by the deployed project on Heroku.
+
+  - [Cloudinary](https://cloudinary.com/)
+    - The cloud platform used to store static media files.
+
+  - [Git](https://git-scm.com/)
+    - used for version controll.
+
+  - [GitPod](https://www.gitpod.io/)
+    - The IDE used to create the site.
+                                               
+  - [GitHub](https://github.com/)
+    - The code hosting platform used to save and store the files for the website.
+
+  - [Heroku](https://www.heroku.com/)
+    - The cloud platform used to deploy the project into live environment.
+
+  - [Bootstrap](https://getbootstrap.com/)
+    - The front-end development framework used for styling along with custom CSS.
+  
+  - [Lucidchart](https://www.lucidchart.com/pages/sv)
+    - The diagramming application used to create ERD diagrams.
+
+  - [Am I responsive?](https://ui.dev/amiresponsive)
+    - used to see how the site looks on a range of devices.
+
+[Back to top ⇧](#table-of-contents)
 
 ## Features
 
 ### Existing Features
 
-#### Recipe Modal
-The 
+#### Navigation Bar
 
-##### Recipe List
-Each recipe is displayed on a card on the account home page and contains:
-lorumipsum
+- The navbar is bootstrap and is at the top right of every page. 
+- If the user is logged in or is a guest the menu content changes appropriately. 
+- The hamburger menu is applied on media breakpoint of 979px. This was when the text from the navbar started going into the family recipe logo and looked cluttered.
+- I kept the menu clean with no additional styling to focus attention on the recipes and content instead.
+ 
+  - **Guests:**
 
-##### Update Recipe Page
-lorumipsum
-
-##### Confirm Delete Recipe Page
-lorumipsum
-
-##### Admin Search Panel
-lorumipsum
-
-##### Update Email
-lorumipsum
-
-##### Change Password
-Users can change their password from the account panel in the account home page. 
-
-### Potential Future Features
-- Allow admin users to edit the services from the account home rather than from the django backend panel
-
-
-## Responsive Layout and Design
-The bootstrap grid system and flexbox was used to create a fully responsive layout and testing on multiple screen sizes and devices was carried out to make sure it each page looks good in many settings.
-
-**Tested devices:**
-
-- iPhone 13
-- Google pixel 4
-- Huawei matebook 14 
-
-
-## Tools Used
-
-- [GitHub](https://github.com/) for hosting 
-- [Color palette generator](https://coolors.co/7e180d-ffffff-313131) for generating color palette
-- [Cloudconvert](https://cloudconvert.com/webm-to-mov) for converting the video from webm to mov
-
-
-### Python packages
-
-- [Django](https://www.djangoproject.com/) used as the framework 
-
-
-A full list of the requirements and the versions used can be found in the requirements.txt file. To install them and run them on your own machine first setup a virtual environment with the command to create a venv... <br>
-`python3 -m venv venv` <br>
-Then this command to run it... <br>
-`source venv/bin/activate` <br>
-To stop running the environment simply type the command... <br>
-`deactivate`
-
-To create the requirements.txt file I ran the following command:<br>
-`pip3 freeze > requirements.txt`
-
-## Testing
-
-Tests  [TESTING.md](TESTING.md).
-
-## Bugs
-
-- lorumipsum
-
-## Deployment
-
-### ElephantSQL
-
-
-### Cloudinary
-
-
-### Heroku
-
+    ![image](static/images/readme/desktop-navbar-guest.png)
     
-### Fork the repository
+    - The navigation bar contains links for the Logo, Home, Register and Login pages.
+    - Clicking "Register" directs users to the create account form.
+    - Clicking "Login" directs users to the login form.
+
+  - **Logged-in users:**
+    
+    ![image](static/images/readme/navbar-desktop.png)
+
+    - The navigation bar contains links for the Logo, Home, Recipes, Add Recipe, and Logout pages.
+    - Clicking "Add Recipe" takes the user to a page where they can fill in a form to publish a recipe.
+    - Clicking "Logout" directs users to the confirmation page.
+
+- On smaller devices, the navigation bar is displayed using a hamburger menu:
+
+    ![image](static/images/readme/navbar-hamburger.png)
+
+#### Logo
+
+<img src="static/images/readme/logo-mobile.png"><br>
+Mobile logo (shown above)
+<br>
+<img src="static/images/readme/logo-desktop.png"><br>
+Desktop logo (shown above)
+<br>
+<video controls src="static/images/readme/video-navbar.mov" width="100%"><br>
+Video showing responsiveness of menu and change to hamburger menu at media breakpoint.
+
+#### Welcome message
+
+![image]()
+
+- This section welcomes users to the blog, once the user is logged in this message changes, this was achieved using the django check to see if the user is authenticated.
+
+- The short welcome explains:
+  - The concept of the site as a platform to share recipes.
+  - That the user will need to create an account to do this.
+
+#### Footer
+
+![image]()
+
+- The footer
+
+- The footer remains consistent across all pages.
+
+#### Sign Up
+
+![image](static/images/readme/signup.png)
+
+- The form enables users to register and create an account.
+- The form includes following fields:
+  - Username
+  - Email
+  - Password
+  - Password (again)
+
+#### Login
+
+![image](static/images/readme/login.png)
+
+- The form enables users to log in.
+
+- When a user logs in, they gain the ability to:
+  - like recipes.
+  - comment on existing recipes.
+  - create new recipes.
+  - edit/delete their own recipes.
+
+#### Logout
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1698066570/sign_out_oksgx5.png)
+
+- When the user clicks on Logout in the navbar, they are redirected to a page displaying a confirmation message above.
+
+  - SIGN OUT:
+    - The user redirects to the home page.
+    - A message indicating that the operation was successful is shown on the screen.
+
+  - REMAIN LOGGED IN:
+    - The user redirects to the home page.
 
 
-### Clone the repository
+#### Recipes page
 
-- lorumipsum
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1698066665/recipes_page_tjxtf4.png)
+
+- This page shows a list of all the published recipes.
+
+- Information displayed:
+  - recipe image;
+  - recipe title;
+  - create date;
+  - category;
+  - estimated time of cooking;
+  - "View Recipe" button.
+
+- By clicking the "View Recipe" button, the user redirects to a page containing detailed information about that specific recipe.
+
+#### Recipe detail page
+
+The recipe detail page includes the following information:
+
+  - The recipe image (or the default image if the recipe image doesn't load).
+  
+  - Information field containing some extra information for recipe authors.
+    
+    - Available for all users:
+    
+      ![image]()
+
+      - recipe title;
+      - estimated time of cooking;
+      - category;
+      - number of servings;
+      - recipe author;
+      - create date;
+      - likes icon:
+        - logged-in users can like recipes;
+        - no-logged users can only see the number of likes.
+      - comment icon that shows the number of comments on the selected recipe.
+    
+    - Extra functionality for the recipe authors:
+   
+      ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697376095/static/images/recipe_view_author.7712060f0483.png)
+
+      - EDIT
+        - By clicking the "EDIT" button, the user is redirected to the page with a form where they can edit the recipe posted by them.
+        - The form has the same fields as the "Add a Recipe" form.
+        - All the form fields are prepopulated.
+      
+      - DELETE
+        - By clicking the "DELETE" button, the user is redirected to the page where they get a question about whether they are sure that they want to delete the recipe.
+       
+          ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1698066873/delete_confirmation_n6eny3.png)
+          - The recipe gets deleted when the user clicks the "DELETE RECIPE" button. The user is redirected to the home page.
+          - The user is redirected to the home page when clicked the "GO BACK" button.
+
+  - Ingredients section.
+
+  - Instructions section.
+
+  - Comments section:
+    
+    - There are some comments on the recipe:
+
+      ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697376107/static/images/comments.c245aa6c507c.png)
+    
+    - There are NO comments:
+
+      ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697376099/static/images/no_comments.937fab397a78.png)
+
+    - Leave a comment (available ONLY for logged-in users):
+
+      ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697376117/static/images/leave_a_comment.d764d9137d00.png)
+
+#### Add a Recipe page
+
+- This page includes a form that allows users who are logged in to publish their own recipes.
+
+- Available fields:
+  - Title
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697376105/static/images/form_title.92e76d13f3ee.png)
+  - Category (Dropdown menu)
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697376112/static/images/form_category.63f3dc7d46c1.png)
+  - Image
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697376114/static/images/form_featured_image.969458f814d3.png)
+  - Ingredients
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697376098/static/images/form_ingredients.1644f639b558.png)
+  - Instructions (Summernote field)
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697376106/static/images/form_instructions.6e139006d641.png)
+  - Estimated time
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697376116/static/images/form_estimated_time.f78b54b4e36b.png)
+  - Servings
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697376109/static/images/form_servings.b8ed7c47f0b4.png)
+  
+  - Buttons
+
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697633871/static/images/buttons_add_a_recipe_form.214a4d7e1147.png)
+   
+    - SAVE:
+
+      - After correctly submitting the form, the user will be redirected to the recipes page upon clicking the save button.
+
+      - A success message is displayed to the user.
+
+    - "CANCEL" button:
+
+       - When the user clicks on the 'go back' button, they will be redirected to the recipes page.
+
+
+### Future Features
+
+- Make it possible for logged-in users to save recipes as their favorites.
+
+- Add a feature that allows users to click on the author's name and view all the recipes published by that author.
+
+- Add some other choices, like difficulty level, meal type, cuisine.
+
+- Enable users to log in using their social media accounts.
+
+[Back to top ⇧](#table-of-contents)
+
+## Testing and Validation.
+
+Detailed testing of the site can be found at [TESTING.md](TESTING.md). 
+
+Testing includes following:
+
+- Validator testing
+- Responsivness & Browser Compability Testing
+- Manual Testing
+- Automated Testing
+- Testing of User Stories
+- Lighthouse
+
+## Fixed Bugs
+
+  - Static files were not loading in the deployed Heroku app. The local preview looked just the way it should, but checking the deployed site, none of the styling was there, and the images weren't loading.
+    - **Fix**: Install [Whitenoise](https://whitenoise.readthedocs.io/en/latest/index.html) and put some lines of code in settings.py as mentioned in the link.
+    - **Update**: The app is working without Whitenoise.
+
+  
+
+## Known issues
+
+
+
+[Back to top ⇧](#table-of-contents)
 
 ## Credits
 
@@ -411,20 +622,268 @@ To style the forms I watched the following tutorials
 - [Style Django Forms With Bootstrap - Django Blog #5](https://www.youtube.com/watch?v=6-XXvUENY_8&ab_channel=Codemy.com)
 - [Tip for changing logo based on screen size](https://stackoverflow.com/questions/34984737/display-a-different-logo-on-mobile-and-desktop)
 
-### Content
-asdfasdf
-
 ### Media
-logo [Casdfaa](https://asdfasdafgb/).
 
-### Code
+- All the images used on the website are downloaded from [Unsplash](https://unsplash.com/).
 
-- Django's :
-  - [asdfe](asdfasdfa)
-  - [sf](asdasdf.html)
+- [Favicon Generator](https://favicon.io/favicon-converter/) was used to generate a favicon from the image.
+
+- [Font Awesome](https://fontawesome.com/) was used to add the icons to the Logo and recipe detail page (estimated time, categories, servings, the number of likes, and the number of comments).
+
+- The recipes published by me are taken from [BBC Good Food](https://www.bbcgoodfood.com/recipes).
+
+### Content
+
+- The main code of this project is based on the Code Institute tutorial ["I Think Therefore I Blog"](https://github.com/Code-Institute-Solutions/Django3blog) with changes made to suit my project. [Django Documentation](https://docs.djangoproject.com/en/4.2/) was used throughout the project.
+
+- I found Stack Overflow to be an excellent source of inspiration and a valuable channel for gaining knowledge. Things I learned and borrow from there:
+ 
+  - Instructions on how to put different background images/background colors on different pages ([click here to read more](https://stackoverflow.com/questions/61434945/putting-a-different-background-image-on-a-different-page-in-a-website))
+
+  - Instructions on how to make navbar links active depending on the page a user is viewing ([click here to read more](https://stackoverflow.com/questions/46617375/how-do-i-show-an-active-link-in-a-django-navigation-bar-dropdown-list))
+
+  - Ability to create/update and delete recipes while getting a success message displayed is achieved by following instructions in two different Stack Overflow articles.
+    - [Create/update](https://stackoverflow.com/questions/67366138/django-display-message-after-creating-a-post);
+    - [Delete](https://stackoverflow.com/questions/47636968/django-messages-for-a-successfully-delete-add-or-edit-item).
+
+  - A method to generate slug for recipes submitted through the site form ([click here to read more](https://stackoverflow.com/questions/837828/how-do-i-create-a-slug-in-django)).
+
+  - PositiveIntegerFields (estimated_time and servings) were validated by following instructions in this [article](https://stackoverflow.com/questions/2248617/0-value-in-django-positiveintegerfield).
+
+- The option to sort recipes by category was implemented following [Very Academy](https://www.youtube.com/watch?v=S9-Bt1JgRjQ&t=2137s) tutorial. I made some modifications in order to show my categories in the form of clickable "boxes" instead of displaying them in the navbar.
+
+- The CSS code for category boxes to zoom/scale in on hover was borrowed from [W3Schools](https://www.w3schools.com/howto/howto_css_zoom_hover.asp).
+
+- [Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/) was used to generate Django Secret Key.
+
+### Acknowledgements
+
+I would like to aknowledge the following people:
+
+  - Sean from the Tutor Assistance team for teaching me about the CSS word-wrap Property (used on the recipe detail page), helping me with my models testing and with updating timeout function for alert messages due to utilizing the newer version of Bootstrap. 
+
+  - My mentor Jubril for good briefings, feedback and tip. 
+
+  - Daisy_mentor (#project-portfolio-4) for sharing information about closing completed User Stories.
+
+  - Kay (the facilitator in my team) for always patiently answering all my questions during our Monday sessions &#128512;
+
+  - Karolis_5P and Emma S-A_5P (Peer Code Review) who took time to look at my project, check the functionality and come up with valuable feedback.
+
+  - Tutor Assistance Team for helping me out with diverse things throughout the project.
+
+[Back to top ⇧](#table-of-contents)
+
+## Deployment
+
+### Installing Django and supporting libraries
+
+- Install **Gunicorn**(the server that is used to run Django on Heroku): `pip3 install django gunicorn`
+
+- Install **dj_database_url** and **pyscopg2**(connect to PostegreSQL): `pip 3 install dj_database_url pyscopg2`
+
+- Install **Cloudinary** (The cloud platform used to store static media files): `pip3 install dj3-cloudinary-storage`
+
+- Install **Whitenoise** (The library that allows the web app to serve its static files.): `pip3 install whitenoise`
 
 
+### Create App
 
-## Acknowledgements
+- Create Project.
 
-- lorumipsum
+- Create App.
+
+- Add App to installed apps in **settings.py**:
+
+  ````
+  INSTALLED_APPS = [
+    ...
+    'APP_NAME',
+  ]
+  ````
+
+### Create a new external database
+
+- Navigate to **ElephantSQL.com** and click **“Get a managed database today”**.
+
+- Click **Create New Instance**.
+
+- Set up your plan:
+  - give your plan a Name;
+  - select the Tiny Turtle (Free) plan.
+
+- Click **“Select Region”** and select a data center near you.
+
+- Click **"Review"**, check that your details are correct and click **“Create instance”**.
+
+- Return to the dashboard and click on the database instance name for this project.
+
+- Copy the database URL.
+
+
+### Create the Heroku app
+
+ - Sign up for Heroku and accept terms of service.
+
+ - Click the **"Create a new app"** button.
+
+ - Give your app a name and select the region closest to you. A name must be unique.
+  
+
+### Create an env.py file
+
+- Create **env.py** file and check that the file is included in the **.gitignore file**.
+
+- Import os library: `import os`.
+
+- Set environment variables:
+  - **DATABASE_URL** with the value you just copied from ElephantSQL: `os.environ["DATABASE_URL"]="<copiedURL>`
+  - **SECRET_KEY**: `os.environ["SECRET_KEY"] = "randomSecretKey"` ([Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/) was used to generate a secret key).
+
+
+### Update settings.py
+
+- Add the following code:
+
+  ````
+  import os
+  import dj_database_url
+  if os.path.isfile('env.py'):
+      import env
+  ````
+
+- Remove the insecure secret key provided by Django. Change your SECRET_KEY variable to the following: `SECRET_KEY = os.environ.get('SECRET_KEY')`
+
+- Comment out the original **DATABASES** variable and add the code below:
+
+  ````
+  DATABASES = {
+      'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+  }
+  ````
+
+- Save all files and make migrations: `python3 manage.py migrate`
+
+
+### Connecting Heroku to the database
+
+- Go back to the Heroku dashboard and open the **Settings** tab:
+
+- Create _Config Vars_:
+  - KEY: **PORT** | VALUE: **8000**.
+  - KEY: **SECRET_KEY** | VALUE: **randomSecretKey**(the value that is in env.py)
+  - KEY: **DATABASE_URL** | VALUE: **ElephantSQL database url**(no quotation marks needed)
+  - KEY: **DISABLE_COLLECTSTATIC** | VALUE: **1** (Temporary to be able to deploy the project as we do not have any static files yet)
+
+
+### Get static and media files stored on Cloudinary
+
+- Create a Cloudinary account (steps can be found in the [Code Institutes](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/9236975633b64a12a61a00e0cca7c47d/?child=first) tutorial in LMS).
+
+- Copy **API Environment Variable** in the Cloudinary dashboard.
+
+- Go back to **env.py** and add a new environment vriable:
+  - **CLOUDINARY_URL** with the value just copied from the dashboard ⇧(remove CLOUDINARY_URL in the beginning).
+
+- HEROKU: Add a new _Config Var_ with the KEY **CLOUDINARY_URL**, and the same value(URL) as in the step above.
+
+- **settings.py**:
+
+  - Add Cloudinary Libraries to installed apps (the order is important):
+
+    ````
+    INSTALLED_APPS = [
+      ...,
+      'cloudinary_storage',
+      'django.contrib.staticfiles',
+      'cloudinary',
+      ...,
+    ]
+    ````
+  
+  - Tell Django to use Cloudinary to store media and static files:
+   
+    ````
+    STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+    MEDIA_URL = '/media/'
+    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+    ````
+ 
+### Tell Django where templates will be stored
+
+  - Link file to the templates directory in Heroku. _Place under the BASE_DIR line_:
+
+    `TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')`
+
+  - Change the templates directory to TEMPLATES_DIR:
+
+    ````
+    TEMPLATES = [
+    {
+      ...,
+      'DIRS': [TEMPLATES_DIR],
+      ...,
+          ],
+        },
+      },
+    ]
+    ````
+
+### Add Heroku Hostname to ALLOWED_HOSTS
+
+  ````
+  ALLOWED_HOSTS = ['app-name.herokuapp.com', 'localhost']
+  ````
+
+### Create a Procfile
+
+`web: gunicorn whatscooking.wsgi`
+
+
+### Go back to Heroku
+
+- Click on the **"Deploy"** section on the top of the page.
+
+- Select **GitHub** as deployment method and click the **"Connect to GitHub"** button.
+
+- Search for the repository for this project, _what-is-cooking_. 
+
+- Click **"Connect"** to link up Heroku app to the GitHub repository.
+
+- Click on **"Deploy Branch"**.
+
+- Click the **"Enable Automatic Deploys"** button to make it possible for Heroku to rebuild the app a new change is pushed to GitHub repository.
+
+[Back to top ⇧](#table-of-contents)
+
+## Development 
+
+## Fork
+
+- Log in to **GitHub** and ind the repository for this project, [_Kattis91/what-is-cooking_](https://github.com/Kattis91/what-is-cooking).
+
+- In the top-right corner of the page, click **Fork**.
+
+- Type some new name into the "Repository name" field to distinguish your fork from the upstream repository.
+
+- Click **Create Fork**.
+
+- The fork is now in your personal account and can be changed in the way you want.
+
+## Clone
+
+- On **GitHub**, navigate to your fork of the _what-is-cooking_ repository.
+
+- Above the list of files, click **<>Code**.
+
+- Copy the **URL** for the repository. Repository can be cloned in three different ways:
+  - **HTTPS**;
+  - **SSH**;
+  - **GitHub CLI**.
+
+- Open Terminal and change the current working directory to the location where you want the cloned directory.
+
+- Type `git clone`, and paste the URL you copied earlier. Press **Enter**
