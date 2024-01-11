@@ -4,7 +4,7 @@
 <div class="container-fluid">
 <div class="row">
 <div class="col-md-6 justify-content-start">
-<img src="static/images/hero-image.png" class="hero img-fluid" alt="hero image">
+<img src="https://res.cloudinary.com/dmtdimx2z/image/upload/v1704967219/static/images/hero-image.fc405b5dd61f.png" class="hero img-fluid" alt="hero image">
 </div>
 <div class="col-md-6">
 {% if not user.is_authenticated %}
@@ -18,7 +18,7 @@ So let's get started and share the best recipes we have while finding others we 
 {% if user.is_authenticated %}
 
 <h1 class="welcome-paragraph">Welcome {{ user.username }}!</h1>
-<p>It's great to have you in our community, so far you have submitted {{ user.recipes.count }} recipes.</p>
+<p>It's great to have you in our community, you are all setup to get sharing and cooking new recipes!</p>
 You can view, edit and delete your recipes that you have submitted.
 <p class="crimson"><a href="{% url 'user_recipes' %}">View Your Recipes</a></p>
 </div>
