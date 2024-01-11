@@ -130,7 +130,7 @@ def latest_recipes(request):
     latest_recipes = Recipe.objects.order_by("-created_at")[:5]
     return render(request, "latest_recipes.html", {"recipes": latest_recipes})
 
-
+@login_required
 def add_comment(request, recipe_id):
     recipe = get_object_or_404(Recipe, id=recipe_id)
 
