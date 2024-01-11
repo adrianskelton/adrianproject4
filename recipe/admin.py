@@ -1,8 +1,9 @@
 from django.contrib import admin
 from .models import Recipe, Comment, Like_model
 
-# Register your models here.
-admin.site.register(Recipe)
+admin.site.register(Recipe, RecipeAdmin)
+admin.site.register(Like_model)  
+admin.site.register(Comment)
 
 
 class RecipeAdmin(admin.ModelAdmin):

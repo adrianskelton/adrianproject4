@@ -1,169 +1,7 @@
-# Family Recipes
-<img src="static/images/readme/responsive.png"><br>
-- [Live Site](https://familyrecipe-66825c6657db.herokuapp.com/)
-- [GitHub Repo](https://github.com/adrianskelton/adrianproject4)
-
-Family Recipe is a recipe sharing website made for my Portfolio Project 4 for code institute, where users can upload and share recipes as well as reading recipes from other users.
-
-I thought about this as I have a family recipe book from South Africa and I think it would be great to have a website where family members could share their family recipes with eachother and the world. I also wanted a rating system based on the ammount of likes and a comment section for recipes. 
-<br>
-
-## Table of contents
 
 
-## Overview
-lorumipsum
-
-## UX
-Five Planes Of Website Design:<br>
-### 1. Strategy<hr>
-
-To create a website with good UI and UX I interviewed my sister in France who is a chef and asked her what her thoughts were on a recipe sharing website and also got insight to what she would want to use the site for. There are many future features that will later be introduced and enhancements that I did not get around to implementing just yet but these will be reflected in the user stories section.
-
-- Project Setup
-  - Create 
-
-- UX
-  - Favicon logo
-
-- Navigation
-  - lorumipsum
-
-- CRUD
-  - lorumipsum
-- Authentication
-  - lorumipsum
-- Validation
-  - lorumipsum
-- Administration
-  - lorumipsum
-- Deployment
-  - lorumipsum
-- Testing
-  - lorumipsum
-- Documentation
-  - lorumipsum
-
-<br>
-
-**Agile Methodology**<br><br>
-I used Agile methodology.<br>
-I used [GitHub](https://github.com/) for all the user stories and epics. As the user stories were accomplished, they were moved in the GitHub Kanban board from **ToDo**, to **In Progress**, **Done** and **Not Implemented** lists.
-The board can be viewed [here](https://github.com/users/adrianskelton/projects/5/).
-
-**Kanban Board**<br><br>
-<img src="media/kanban.png"><br><br>
-
-<details>
-<summary>Sprint 1: Base Setup</summary>
-
-|EPIC|User Story|Description|
-|:--|:--|:--|
-|Project Setup|Project setup|As a developer, I need to set up the project so that it is ready for implementing the core features.|
-
-</details><br>
-
-<details>
-<summary>Sprint 2: Navigation & Account Creation</summary>
-
-|EPIC|User Story|Description|
-|:--|:--|:--|
-|**Project Setup**|||
-|Navigation|Navbar|As a developer I need to create a navbar so that users can navigate the site.|
-
-</details><br>
-
-<details>
-<summary>Sprint 3: Styling</summary>
-
-|EPIC|User Story|Description|
-|:--|:--|:--|
-|CRUD|Create a recipe|As a logged in user I create a recipe.|
-
-</details><br>
-
-<details>
-<summary>Sprint 4: CRUD</summary>
-
-|EPIC|User Story|Description|
-|:--|:--|:--|
-|CRUD|Delete recipe|As a logged in user I can delete a recipe.|
-
-</details><br>
-
-<details>
-<summary>Sprint 5: Search & Email</summary>
-
-|EPIC|User Story|Description|
-|:--|:--|:--|
-|Administration|Admin search|As an admin I can filter and search the recipes so that I can find more relevant recipes easily.|
-
-</details><br>
-
-<details>
-<summary>Sprint 6: Testing & Documentation</summary>
-
-|EPIC|User Story|Description|
-|:--|:--|:--|
-|Testing|Unit Tests|As a developer I need to use testing so that I an sure my code is free of bugs and will not result in site errors.|
-
-</details><br>
-
-### 2. Scope<hr>
-**Simple and Intuitive UX**<br>
-- Create a website that makes people want to share and read recipes.
 
 
-**Relevant Content**<br>
-- Make all the content easily accessible
-
-
-**Responsiveness**<br>
-- Create a responsive website that works on every device and screen size.<br><br>
-
-### 3. Structure<hr>
-The website is designed with the user in mind and has the pages listed below:
-- Landing page
-  - Recipes
-  - Login
-- Account Home
-
-There are also 2 pages available to users who are signed in:
-- Submit Recipes
-- Login
-
-
-#### Navigation
-
-The navbar is bootstrap .
-All users will see:
-- lorum ipsum
-
-A user who isn't signed in will see:
-- lorum ipsum
-
-<img src="media/navbar_guest.png" alt=""><br>
-
-A user who is signed in will see:
-- My Account
-- Logout
-
-<img src="media/signed-in-navbar.png" alt=""><br>
-
-Hamburger menu image.<br>
-<img src="media/hamburger-menu.gif" alt=""><br>
-
-Hover effect of links.<br>
-<img src="media/nav-hover.gif" alt=""><br>
-
-#### Footer
-
-The footer is the same across all the pages and includes:
-- Social Media Icons (Facebook, Instagram, Github)
-- A copyright statement
-
-Link hover effect to show the link is active.<br>
-<img src="media/footer-hover.gif" alt="Video of the footer" width="100%"><br>
 
 #### Pages
 
@@ -174,28 +12,9 @@ The landing page is divided into 4 sections:
 - Recipe section
 
 
-##### Sign Up Page
-
-<img src="media/.png" alt="" width="60%"><br>
-
-This page uses the allauth template as a base with custom design added.
-The username and password fields are mandatory but the email is optional. If the user signs up with and includes and email address they will be sent email updates on:
-- lorum ipsum
 
 
-##### Sign In Page
 
-<img src="media/log-in-page.png" alt="e" width="60%"><br>
-
-This page 
-
-##### Account Home Page
-
-<img src="media/account-home.png" alt="Image of the account home page"><br>
-
-This page shows the users recipes.
-On a large screen it is divided into 2 sections:
-- lorum ipsum
 
 
 
@@ -272,20 +91,11 @@ The project uses ElephantSQL as PostgreSQL relational database for storing the d
 
 ### 5. Surface<hr>
 
-#### Color Scheme and Fonts
-
-- The fonts used for this site were imported from [Google Fonts](https://fonts.google.com/):
-  - Josefin for the headings
-  <img src="static/images/readme/font-josefin.png">
-  - Crimson for the body
-  <img src="static/images/readme/font-crimson.png">
 
 
 
-- The colors used were based on the the colors in the logo and the hero image tomato color that stood out to me. I chose the primary color to invoke a feeling of warmth of sharing recipes with community and it matched the heart color as part of the logo. 
-  - #7E180D color1
-  - #FFFFFF color2 
-  - #313131 color3
+
+
 
 <img src="static/images/readme/palette.png" width="60%">
 
@@ -407,9 +217,7 @@ Tests  [TESTING.md](TESTING.md).
 
 ## Credits
 
-To style the forms I watched the following tutorials
-- [Style Django Forms With Bootstrap - Django Blog #5](https://www.youtube.com/watch?v=6-XXvUENY_8&ab_channel=Codemy.com)
-- [Tip for changing logo based on screen size](https://stackoverflow.com/questions/34984737/display-a-different-logo-on-mobile-and-desktop)
+
 
 ### Content
 asdfasdf
