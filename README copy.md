@@ -72,19 +72,19 @@ The project uses ElephantSQL as PostgreSQL relational database for storing the d
 
 ## User Experience
 
-I used the design thinking approach to create a clutter-free website with only necessary information, making it easy for users to navigate. 
+To create a website with good UI and UX I interviewed my sister in France who is a chef and asked her what her thoughts were on a recipe sharing website and also got insight to what she would want to use the site for. 
 
-To maximize the user approach, I interviewed my friend Josefine throughout the process. Among other things, she provided valuable tips on displaying categories on each recipe card, which indeed makes the user experience better.
+There are many future features that will later be introduced and enhancements that I did not get around to implementing just yet but these will be reflected in the user stories section.
 
 ### Agile
 
-I employed the agile methodology, starting from the planning stage and continuing until the final product was built. To ensure that I stayed organized and on track, I utilized a GitHub project and a [Kanban board](https://github.com/users/Kattis91/projects/3/views/1). Information about User Stories can be found in the subsection below⇩ 
+I employed the agile methodology, starting from the planning stage and continuing until the final product was built. To ensure that I stayed organized and on track, I utilized a GitHub project and a [Kanban board](https://github.com/users/adrianskelton/projects/5/views/2). Information about User Stories can be found in the subsection below⇩ 
 
 **Five planes of User Experience:**
 
 ### Strategy
 
-My User Stories can be found [here](https://github.com/Kattis91/what-is-cooking/issues). All User Stories include:
+My User Stories can be found [here](https://github.com/adrianskelton/adrianproject4/issues). All User Stories include:
  - Acceptance Criteria
  - Tasks
  - Labels (MoSCoW Priotarization)
@@ -95,35 +95,24 @@ Please, go to [TESTING.md](TESTING.md) if you want to come to the section where 
 
 #### Key Project Goal
 
-Planning what to cook can be a struggle for many. The key project goal of the blog is to establish a visually appealing and user-friendly open-source recipe database. It should not be challenging for users to find what they are looking for. 
-
-Therefore, I have included **categories** on the homepage of the site: 
-
-  - It is a useful feature for users who have a specific food preference and do not want to waste time browsing through all the recipes. By clicking on a category, they can easily find dishes that meet their specific criteria, such as vegetarian dishes. This leads to a more efficient and enjoyable user experience.
-
-  - As for those who don't know what they want, seeing categories can help them narrow down their choices and ultimately get some inspiration and ideas.
-
-With easy-to-follow links, the site is highly navigable.
+The key goal of the website is to create a platform where users can create an account and share recipes as well as viewing recipes shared by other users.
 
 #### Target Audience
 
-The best part of the blog is that it caters to almost everyone. Of course, you need to be old enough to be in the kitchen.
-
-Whether you are uncertain about meal choices, a food-lover seeking culinary knowledge, or simply a "hungry" person desiring to learn new recipes, tips, and cooking techniques, everybody is welcome!
+The target audience is primarily people who have family recipes that they are proud of and want to share with the world but also anyone that likes to cook and who wants new and different recipes to try out from around the world. That is why I added country as an option to the recipe model as well as the like function so that users could see how the recipes were rated.
 
 #### User Requirements and Expectations:
 
-- A brief and simple description of the site’s purpose.
+- Easy navigation throughout the site.
 
-- Easy to navigate the site to find information.
+- Uncomplicated user experience to login and handle recipe creation and modification.
 
-- A quick and thorough overview of the site's features and functionalities.
+- Responsive and informative feedback on the site (comments and likes).
 
-- Links and functions work as expected.
+- Capability to access the site across various electronic devices.
 
-- Feedback when ineracting with the site.
+- Fully working links and functionality.
 
-- Possibility to view the site on a range of device sizes.
 
 ### Scope
 
@@ -139,7 +128,7 @@ Whether you are uncertain about meal choices, a food-lover seeking culinary know
 
 - A thorough list of ingredients and step-by-step instructions to follow.
 
-- A possibility to sort recipes by categories.
+- A possibility to see what country the recipe is from.
 
 - A possibility to read comments.
 
@@ -147,7 +136,7 @@ Whether you are uncertain about meal choices, a food-lover seeking culinary know
 
 - Add registration/login features that give the user access to extra functionality.
 
-- Add Logout functionality for safety reasons.
+- Add Logout functionality for security reasons.
 
 #### Functionality for logged-in users:
 
@@ -365,7 +354,7 @@ Users have the option to upload images in various sizes. To ensure consistency, 
 
   - [GitPod](https://www.gitpod.io/)
     - The IDE used to create the site.
-
+                                               
   - [GitHub](https://github.com/)
     - The code hosting platform used to save and store the files for the website.
 
@@ -389,7 +378,7 @@ Users have the option to upload images in various sizes. To ensure consistency, 
 
 #### Navigation Bar
 
-- The navbar is at the top right of every page. 
+- The navbar is bootstrap and is at the top right of every page. 
 - If the user is logged in or is a guest the menu content changes appropriately. 
 - The hamburger menu is applied on media breakpoint of 979px. This was when the text from the navbar started going into the family recipe logo and looked cluttered.
 - I kept the menu clean with no additional styling to focus attention on the recipes and content instead.
@@ -461,11 +450,10 @@ Video showing responsiveness of menu and change to hamburger menu at media break
 - The form enables users to log in.
 
 - When a user logs in, they gain the ability to:
-  - comment on existing recipes,
+  - like recipes.
+  - comment on existing recipes.
   - create new recipes.
   - edit/delete their own recipes.
-
-- A message indicating that the operation was successful is shown on the screen.
 
 #### Logout
 
