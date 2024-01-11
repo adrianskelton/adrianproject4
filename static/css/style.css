@@ -34,7 +34,7 @@ a {
     padding-top: 10px;
 }
 
-.custom-btn {
+.custom-btn-red {
     display: inline-block;
     padding: 3px 13px; 
     background-color: #7e180d; 
@@ -46,7 +46,7 @@ a {
 
 }
 
-.custom-btn:hover {
+.custom-btn-red:hover {
     background-color: #9b271a; 
     border-color: #b3b3b3; 
     color: #fff; 

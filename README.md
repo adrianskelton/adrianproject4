@@ -252,10 +252,10 @@ All buttons throughout the pages have the same styling, ensuring uniformity and 
  
 I went with following colors:
   - `GREEN` that usually is associated with "YES" | "SAVE" | "OK".
-  - `#850000` that usually is associated with "NO" | "CANCEL" | "GO BACK".
+  - `#7e180d` that usually is associated with "NO" | "CANCEL" | "GO BACK".
   - `WHITE` for the text in order to get a sufficient contrast ratio.
 
-    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697633882/static/images/buttons_edit_delete.e24beb2a6eb9.png)
+    ![image]()
   
 <details>
 
