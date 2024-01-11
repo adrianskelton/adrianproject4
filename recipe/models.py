@@ -25,7 +25,7 @@ class Recipe(models.Model):
     def __str__(self):
         return self.title
 
-class like_model(models.Model):
+class Like_model(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField()
     likes = models.ManyToManyField(User, related_name='liked_recipes')
