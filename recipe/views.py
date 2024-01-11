@@ -5,7 +5,7 @@ from django.http import HttpResponse
 from django.views import View
 from django import forms
 from .forms import RecipeForm, CommentForm, DeleteRecipeForm
-from .models import Recipe, like_model, Comment
+from .models import Recipe, Like_model, Comment
 
 
 @login_required
