@@ -69,6 +69,12 @@ a {
     max-width: fit-content;
 }
 
+.img-fluid {
+    max-height: 264px;
+    width: 100%;
+    object-fit: cover;
+}
+
 .logo .mobile {
     display: none;
     max-height: 180px;
@@ -81,18 +87,10 @@ header {
     max-height: 150vh;
 }
 
-.recipe-item {
-    height: 250px;
-}
-
 .random-image {
     width: auto;
     max-height: 300px;
     border-radius: 10px;
-}
-
-.likes-count {
-    background-image: ;
 }
 
 .inline-space {
@@ -108,7 +106,6 @@ header {
     text-align: center; 
     text-decoration: underline;
     }
-
 
 .margins-30px {
     margin-top: 30px;
@@ -129,7 +126,7 @@ header {
 }
 
 .nav-center {
-    font-family: 'Josefin Sans', sans-serif
+    font-family: 'Josefin Sans', sans-serif;
     text-decoration: none;
 }
 
