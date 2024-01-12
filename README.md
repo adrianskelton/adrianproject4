@@ -517,7 +517,7 @@ The recipe detail page includes the following information:
       - DELETE
         - By clicking the "DELETE" button, the user is redirected to the page where they get a question about whether they are sure that they want to delete the recipe.
        
-          ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1698066873/delete_confirmation_n6eny3.png)
+          ![image](.png)
           - The recipe gets deleted when the user clicks the "DELETE RECIPE" button. The user is redirected to the home page.
           - The user is redirected to the home page when clicked the "GO BACK" button.
 
@@ -545,7 +545,14 @@ The recipe detail page includes the following information:
 
 - Available fields:
   - Title
-  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697376105/static/images/form_title.92e76d13f3ee.png)
+  - Country
+  - Image (uploaded to cloudinary)
+  - Description
+  - Ingredients
+  - Instructions
+  - Servings
+
+  ![image](static/images/create.png)
   - Category (Dropdown menu)
   ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697376112/static/images/form_category.63f3dc7d46c1.png)
   - Image
@@ -561,7 +568,7 @@ The recipe detail page includes the following information:
   
   - Buttons
 
-    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697633871/static/images/buttons_add_a_recipe_form.214a4d7e1147.png)
+    ![image]()
    
     - SAVE:
 
@@ -601,15 +608,13 @@ Testing includes following:
 
 ## Fixed Bugs
 
-  - Static files were not loading in the deployed Heroku app. The local preview looked just the way it should, but checking the deployed site, none of the styling was there, and the images weren't loading.
-    - **Fix**: Install [Whitenoise](https://whitenoise.readthedocs.io/en/latest/index.html) and put some lines of code in settings.py as mentioned in the link.
-    - **Update**: The app is working without Whitenoise.
-
-  
+  - **Erorr**: I could not runserver or make migrations at some point. The error below was shown. Migration folder 0004 was missing.
+  ![image](static/images/error-migration-error.png)
+  - **Fix**: Moved all the migration files to a subfolder and then tried again.
 
 ## Known issues
 
-
+None
 
 [Back to top ⇧](#table-of-contents)
 
@@ -625,7 +630,7 @@ To style the forms I watched the following tutorials
 
 - [Favicon Generator](https://favicon.io/favicon-converter/) was used to generate a favicon from the image.
 
-- [Font Awesome](https://fontawesome.com/) was used to add the icons to the Logo and recipe detail page (estimated time, categories, servings, the number of likes, and the number of comments).
+- [Font Awesome](https://fontawesome.com/) was used to add the icons for the social media links in the footer.
 
 - The recipes published by me are taken from [BBC Good Food](https://www.bbcgoodfood.com/recipes).
 
@@ -657,15 +662,9 @@ To style the forms I watched the following tutorials
 
 I would like to aknowledge the following people:
 
-  - Sean from the Tutor Assistance team for teaching me about the CSS word-wrap Property (used on the recipe detail page), helping me with my models testing and with updating timeout function for alert messages due to utilizing the newer version of Bootstrap. 
+  - Spencer my mentor who helped me throughout this project.
 
-  - My mentor Jubril for good briefings, feedback and tip. 
-
-  - Daisy_mentor (#project-portfolio-4) for sharing information about closing completed User Stories.
-
-  - Kay (the facilitator in my team) for always patiently answering all my questions during our Monday sessions &#128512;
-
-  - Karolis_5P and Emma S-A_5P (Peer Code Review) who took time to look at my project, check the functionality and come up with valuable feedback.
+  - My sister Claire in France who helped with the concept via her feedback of what she would like in a recipe sharing site.
 
   - Tutor Assistance Team for helping me out with diverse things throughout the project.
 
@@ -681,7 +680,6 @@ I would like to aknowledge the following people:
 
 - Install **Cloudinary** (The cloud platform used to store static media files): `pip3 install dj3-cloudinary-storage`
 
-- Install **Whitenoise** (The library that allows the web app to serve its static files.): `pip3 install whitenoise`
 
 
 ### Create App
