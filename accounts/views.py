@@ -12,7 +12,6 @@ def register_view(request):
     return render(request, "accounts/register.html", context)
 
 def login_view(request):
-    # future -> ?next=/articles/create/
     if request.method == "POST":
         form = AuthenticationForm(request, data=request.POST)
         if form.is_valid():

@@ -185,6 +185,16 @@ header {
     text-decoration: underline;
 }
 
+.button-group {
+    margin-top: 20px; 
+}
+
+button,
+a.back-link {
+    display: inline-block;
+    margin-right: 10px; 
+}
+
 /* For mobile screen sizes */
 
 @media (max-width: 600px) {
