@@ -25,13 +25,13 @@
             <!-- User has liked the recipe, show unlike button -->
             <form action="{% url 'unlike_recipe' recipe.pk %}" method="post">
             {% csrf_token %}
-            <button type="submit">Unlike</button>
+            <button type="submit" class="custom-btn-red">Unlike</button>
             </form>
         {% else %}
             <!-- User has not liked the recipe, show like button -->
             <form action="{% url 'like_recipe' recipe.pk %}" method="post">
             {% csrf_token %}
-            <button type="submit">Like</button>
+            <button type="submit" class="custom-btn-green">Like</button>
             </form>
         {% endif %}
         {% else %}

@@ -26,7 +26,7 @@
       {% endif %}
       {% if user in recipe.likes.all %}
         <!-- User has liked the recipe, show unlike button -->
-        <form action="{% url 'unlike_recipe' recipe.pk %}" method="post" class="d-inline btn-danger btn-sm">
+        <form action="{% url 'unlike_recipe' recipe.pk %}" method="post" class="d-inline custom-btn-red btn-sm">
           {% csrf_token %}
           <button type="submit" class="btn btn-secondary btn-sm">Unlike</button>
         </form>
@@ -34,7 +34,7 @@
         <!-- User has not liked the recipe, show like button -->
         <form action="{% url 'like_recipe' recipe.pk %}" method="post" class="d-inline">
           {% csrf_token %}
-          <button type="submit" class="btn btn-primary btn-sm">Like</button>
+          <button type="submit" class="btn custom-btn-green btn-sm">Like</button>
         </form>
       {% endif %}
     {% else %}
