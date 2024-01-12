@@ -411,20 +411,24 @@ Video showing responsiveness of menu and change to hamburger menu at media break
 
 #### Welcome message
 
-![image]()
+- This section welcomes users to the blog, once the user is logged in this message changes, this was achieved using the django check to see if the user is authenticated. 
 
-- This section welcomes users to the blog, once the user is logged in this message changes, this was achieved using the django check to see if the user is authenticated.
-
-- The short welcome explains:
+The short welcome explains:
   - The concept of the site as a platform to share recipes.
   - That the user will need to create an account to do this.
 
+![image](static/images/welcome-guest.png)
+
+The message then changes as seen below. I put a link after the welcome to the user to allow them to view their recipes. From this page they are also able to comment, like, edit and delete their recipes.
+
+![image](static/images/welcome-logged-in.png)
+
+
 #### Footer
 
-![image]()
+![image](static/images/footer.png)
 
-- The footer
-
+- The footer is quite unobtrusive to not take away from the main content, the social media icons open up in a new page when clicked.
 - The footer remains consistent across all pages.
 
 #### Sign Up

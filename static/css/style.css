@@ -22,7 +22,7 @@ footer {
 }
 
 h1, h2, h3, h4 {
-    font-weight: bold;
+    font-weight: 300;
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -161,7 +161,6 @@ header {
 
 .latest-recipes {
     margin-top: 20px;
-    color: black;
 }
 
 .nav-link {
