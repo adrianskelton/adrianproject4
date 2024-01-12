@@ -31,6 +31,10 @@ a {
     color: black;
 }
 
+.p-strong {
+    font-weight: 200;
+}
+
 .welcome-paragraph {
     padding-top: 10px;
 }

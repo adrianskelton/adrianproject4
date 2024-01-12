@@ -34,10 +34,14 @@ So let's get started and share the best recipes we have while finding others we 
 <div class="row mb-3">
 <img src="{{ recipe.featured_image.url }}" alt="{{ recipe.title }} Image" class="img-fluid img-fluid round-image">
 <h2>{{ recipe.title|title }}</h2>
-<p>Country: {{ recipe.country|title }}</p>
-<p>Author: {{ recipe.author.username }}</p>
-<p class="likes-count">Likes: {{ recipe.likes.count }}</p>
-<p><a href="{% url 'recipe_detail' recipe.id %}" class="custom-btn-green">Read More</a></p>
+<p class="recipe-meta">
+    <span class="p-strong">Author:</span> <span>{{ recipe.author.username }}</span>
+    <span class="p-strong">Country:</span> <span>{{ recipe.country }}</span>
+    <span class="p-strong">Likes:</span> <span>{{ recipe.likes.count }}</span>
+</p>
+
+
+
 </div>
 </div>
 {% if forloop.counter|divisibleby:3 and not forloop.last %}
