@@ -60,15 +60,13 @@ The project uses ElephantSQL as PostgreSQL relational database for storing the d
   - This is the main model for the website to function. I based this off the walkthrough I think therefore I blog. Adjusted the layout a bit to fit the website function as a worldwide sharing platform for recipes in mind.
 
 #### Comment Model
- - The comment model allows logged in users to 
+ - The comment model allows logged in users to comment on recipes.
 
-#### Category Model
+#### Like Model
   - The custom model.
-  - Enable users to place recipes in different categories.
-  - Make it possible to "sort" recipes by categories.
+  - Enable users to like recipes.
 
 [Back to top ⇧](#table-of-contents)
-
 
 ## User Experience
 
@@ -143,17 +141,13 @@ The target audience is primarily people who have family recipes that they are pr
   - **CRUD functionality:**
 
     - Implement feature that allows user to **C**reate recipes.
-
     - Implement feature that allows user to **R**ead recipes.
-
     - Implement feature that allows user to **U**pdate recipes.
-
     - Implement feature that allows user to **D**elete recipes.
 
   - **Comment and like feature:**
 
     - Enable logged-in users to post comments on any of the published recipes.
-
     - Enable logged-in users to like/unlike published recipes.
 
 
@@ -166,14 +160,18 @@ The blog is divided into different pages. Some of the pages are accessible only 
 
 ### Skeleton
 
-I created wireframes using [Figma](https://www.figma.com/).
+I created wireframes using [Balsamiq](https://balsamiq.com/). Please note this was only a concept in the beginning so the end result was quite different.
 
 <details>
 <summary>Home page</summary>
 
-LEFT: all users | RIGHT: logged-in users.
+All users 
+![image](static/images/readme/desktop-landing-guest.png)
 
-![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1698070413/wireframes_home_page_yzr4qc.png)
+Logged-in users.
+![image](static/images/readme/desktop-landing-user.png)
+
+
 
 </details>
 
@@ -196,7 +194,7 @@ LEFT: all users | RIGHT: logged-in users.
 <details>
 <summary>Add a Recipe page</summary>
 
-![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1698070413/wireframes_add_a_recipe_page_r1ea4a.png)
+![image](static/images/readme/create.png)
 
 </details>
 
@@ -456,12 +454,12 @@ The message then changes as seen below. I put a link after the welcome to the us
 
 #### Logout
 
-![image](static/images/logout-confirm.png)
+![image](static/images/readme/       logout-confirm.png)
 
 - When the user clicks on Logout in the navbar, they are redirected to a page displaying a confirmation message above.
 
   - SIGN OUT:
-    - The user redirects to the home page.
+  
     - A message indicating that the operation was successful is shown on the screen.
 
   - REMAIN LOGGED IN:
