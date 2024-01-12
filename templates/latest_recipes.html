@@ -7,21 +7,20 @@
 {% for recipe in user_recipes %}
 <div class="recipe-item">
 <h2>{{ recipe.title }}</h2>
-<p>Country: {{ recipe.country }}</p>
-<p>Likes: {{ recipe.likes.count }}</p>
-
+<p class="p-nospace">Country: {{ recipe.country }}</p>
+<p class="p-nospace">Likes: {{ recipe.likes.count }}</p>
 {% if user.is_authenticated %}
 {% if user in recipe.likes.all %}
 <!-- User has liked the recipe, show unlike button -->
 <form action="{% url 'unlike_recipe' recipe.pk %}" method="post">
 {% csrf_token %}
-<button type="submit" class="custom-btn-red">Unlike</button>
+<button type="submit" class="custom-btn-red" class="p-nospace">Unlike</button>
 </form>
 {% else %}
 <!-- User has not liked the recipe, show like button -->
 <form action="{% url 'like_recipe' recipe.pk %}" method="post">
 {% csrf_token %}
-<button type="submit" class="btn-primary custom-btn-green btn-sm">Like</button>
+<button type="submit" class="btn-primary custom-btn-green btn-sm p-nospace">Like</button>
 </form>
 {% endif %}
 {% else %}
