@@ -22,7 +22,8 @@ footer {
 }
 
 h1, h2, h3, h4 {
-    font: #7e180d;
+    color:#7e180d;
+    font-weight: bold;
     font-family: 'Josefin Sans', sans-serif;
 }
 
