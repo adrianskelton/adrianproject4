@@ -452,7 +452,7 @@ Video showing responsiveness of menu and change to hamburger menu at media break
 
 #### Logout
 
-![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1698066570/sign_out_oksgx5.png)
+![image](static/images/logout-confirm.png)
 
 - When the user clicks on Logout in the navbar, they are redirected to a page displaying a confirmation message above.
 
