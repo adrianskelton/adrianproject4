@@ -76,7 +76,7 @@ There are many future features that will later be introduced and enhancements th
 
 ### Agile
 
-I employed the agile methodology, starting from the planning stage and continuing until the final product was built. To ensure that I stayed organized and on track, I utilized a GitHub project and a [Kanban board](https://github.com/users/adrianskelton/projects/5/views/2). Information about User Stories can be found in the subsection below⇩ 
+I employed the agile methodology, starting from the planning stage and continuing until the final product was built. To ensure that I stayed organized and on track, I utilized a GitHub project and a [Kanban board](https://github.com/users/adrianskelton/projects/5/views/1). Information about User Stories can be found in the subsection below⇩ 
 
 **Five planes of User Experience:**
 
@@ -171,8 +171,6 @@ All users
 Logged-in users.
 ![image](static/images/readme/desktop-landing-user.png)
 
-
-
 </details>
 
 <details>
@@ -187,14 +185,14 @@ Logged-in users.
 
 LEFT: all users | RIGHT: logged-in users.
 
-![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1698070413/wireframes_recipe_detail_page_xrr53z.png)
+![image](.png)
 
 </details>
 
 <details>
 <summary>Add a Recipe page</summary>
 
-![image](static/images/readme/create.png)
+![image](.png)
 
 </details>
 
@@ -202,7 +200,7 @@ LEFT: all users | RIGHT: logged-in users.
 
 <summary>Sign Up</summary>
 
-![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1698070605/wireframes_sign_up_xvkbyi.png)
+![image](.png)
 
 </details>
 
@@ -468,13 +466,13 @@ The message then changes as seen below. I put a link after the welcome to the us
 
 #### Recipes page
 
-![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1698066665/recipes_page_tjxtf4.png)
+![image](static/images/readme/recipe-page.png)
 
 - This page shows a list of all the published recipes.
 
 - Information displayed:
   - recipe image;
-  - recipe title;
+  - created date;
   - create date;
   - "Read more" button.
 
@@ -484,26 +482,16 @@ The message then changes as seen below. I put a link after the welcome to the us
 
 The recipe detail page includes the following information:
 
-  - The recipe image (or the default image if the recipe image doesn't load).
-  
-  - Information field containing some extra information for recipe authors.
-    
-    - Available for all users:
-    
-      ![image]()
 
-      - recipe title;
-      - estimated time of cooking;
-      - category;
-      - number of servings;
-      - recipe author;
-      - create date;
-      - likes icon:
-        - logged-in users can like recipes;
-        - no-logged users can only see the number of likes.
-      - comment icon that shows the number of comments on the selected recipe.
-    
-    - Extra functionality for the recipe authors:
+
+![image]()
+
+- recipe title;
+- country;
+- number of servings;
+- create date;
+- likes icon:
+- comment icon that shows the number of comments on the selected recipe.
    
       ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697376095/static/images/recipe_view_author.7712060f0483.png)
 
