@@ -10,7 +10,7 @@
 <img src="{{ recipe.featured_image.url }}" alt="{{ recipe.title }} Image" class="img-fluid round-image">
 <p>Author: {{ recipe.author.username|title }}</p>
 <p>Country: {{ recipe.country|title }}</p>
-<p><a href="{% url 'recipe_detail' recipe.id %}">Read More</a></p>
+<p><a href="{% url 'recipe_detail' recipe.id %}" class="custom-btn-green">Read More</a></p>
 </div>
 </div>
 {% endfor %}
