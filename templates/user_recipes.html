@@ -28,7 +28,7 @@
         <!-- User has liked the recipe, show unlike button -->
         <form action="{% url 'unlike_recipe' recipe.pk %}" method="post" class="d-inline custom-btn-red btn-sm">
           {% csrf_token %}
-          <button type="submit" class="btn btn-secondary btn-sm">Unlike</button>
+          <button type="submit" class="btn custom-btn-red">Unlike</button>
         </form>
       {% else %}
         <!-- User has not liked the recipe, show like button -->
