@@ -478,9 +478,7 @@ The message then changes as seen below. I put a link after the welcome to the us
   - recipe image;
   - recipe title;
   - create date;
-  - category;
-  - estimated time of cooking;
-  - "View Recipe" button.
+  - "Read more" button.
 
 - By clicking the "View Recipe" button, the user redirects to a page containing detailed information about that specific recipe.
 
