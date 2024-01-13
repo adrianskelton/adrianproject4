@@ -14,8 +14,6 @@ Results from [HTML W3C Validator](https://validator.w3.org)
 | Submit Recipe        | ![screenshot](static/images/testing/validation-w3-submit.png) | Pass: No Errors, No warning |
 | All Recipes | ![screenshot](static/images/testing/validation-w3-allrecipe.png) | Pass: No Errors, No warning |
 | Recipe Detail       | ![screenshot](static/images/testing/validation-w3-recipe-detail.png) | Pass: No Errors, No warning |
-| Create user      | ![screenshot](images/testing/w8.png) | Pass: No Errors, No warning |
-| Login        | ![screenshot](images/testing/w7.png) | Pass: No Errors, No warning |
 | Logout         | ![screenshot](static/images/testing/validation-w3-logout.png) | Pass: No Errors, No warning |
 | User Recipe          | ![screenshot](static/images/testing/validation-w3-user-recipe.png) | Pass: No Errors, No warning |
 
@@ -25,15 +23,7 @@ Results from [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) for CSS
 
 | File       | Screenshot                                        | Notes           |
 |------------|---------------------------------------------------|-----------------|
-| styles.css | ![screenshot](images/testing/w1.png) | Pass: No Errors, No warning  |
-
-### JavaScript
-
-Results from [JShint Validator](https://jshint.com) for JS validation
-
-| File      | Screenshot                           | Notes                        |
-|-----------|--------------------------------------|------------------------------|
-| script.js | ![screenshot](images/testing/j1.png) | Pass: No Errors, No warning  |
+| styles.css | ![screenshot](static/images/testing/validation-w3-user-recipe.png) | Pass: No Errors, No warning  |
 
 ### Python
 
@@ -41,8 +31,8 @@ Results from [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) for python va
 
 | File      | CI URL                                  | Screenshot                           | Notes                       |
 |-----------|-----------------------------------------|--------------------------------------|-----------------------------|
-| views.py  | [PEP8 CI](https://pep8ci.herokuapp.com) | ![screenshot](images/testing/p4.png) | Pass: No Errors, No warning |
-| models.py | [PEP8 CI](https://pep8ci.herokuapp.com) | ![screenshot](images/testing/p2.png) | Pass: No Errors, No warning |
+| views.py  | [PEP8 CI](https://pep8ci.herokuapp.com) | ![screenshot](static/images/testing/pep8-views.png) | Pass: No Errors, No warning |
+| models.py | [PEP8 CI](https://pep8ci.herokuapp.com) | ![screenshot](static/images/testing/pep8-models.png) | Pass: No Errors, No warning |
 | urls.py   | [PEP8 CI](https://pep8ci.herokuapp.com) | ![screenshot](images/testing/p1.png) | Pass: No Errors, No warning |
 | forms.py  | [PEP8 CI](https://pep8ci.herokuapp.com) | ![screenshot](images/testing/p3.png) | Pass: No Errors, No warning |
 
