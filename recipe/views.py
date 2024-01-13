@@ -175,4 +175,3 @@ def delete_recipe(request, pk):
         form = DeleteRecipeForm()
 
     return render(request, "delete_recipe.html", {"recipe": recipe, "form": form})
-    

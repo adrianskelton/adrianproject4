@@ -19,4 +19,3 @@ class RecipeAdmin(admin.ModelAdmin):
 class CommentAdmin(admin.ModelAdmin):
     list_display = ('name', 'post', 'email')
     date_hierarchy = 'created'
-
