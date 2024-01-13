@@ -17,7 +17,7 @@ Results from [HTML W3C Validator](https://validator.w3.org)
 | Create user      | ![screenshot](images/testing/w8.png) | Pass: No Errors, No warning |
 | Login        | ![screenshot](images/testing/w7.png) | Pass: No Errors, No warning |
 | Logout         | ![screenshot](static/images/testing/validation-w3-logout.png) | Pass: No Errors, No warning |
-| 404          | ![screenshot](images/testing/w9.png) | Pass: No Errors, No warning |
+| User Recipe          | ![screenshot](static/images/testing/validation-w3-user-recipe.png) | Pass: No Errors, No warning |
 
 ### CSS
 
