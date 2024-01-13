@@ -1,8 +1,6 @@
 from . import views
 from django.urls import path
-from .views import home, recipe_view, create_or_edit_recipe, recipe_detail,
-user_recipes, like_recipe, unlike_recipe, top_five, sort_by_country,
-latest_recipes, all_recipes, add_comment, delete_recipe
+from .views import home, recipe_view, create_or_edit_recipe, recipe_detail, user_recipes, like_recipe, unlike_recipe, top_five, sort_by_country, latest_recipes, all_recipes, add_comment, delete_recipe
 
 
 urlpatterns = [
@@ -18,7 +16,6 @@ urlpatterns = [
     path('latest-recipes/', latest_recipes, name='latest_recipes'),
     path('sort-by-country/', sort_by_country, name='sort_by_country'),
     path('user-recipes/', user_recipes, name='user_recipes'),
-    path('recipe/<int:recipe_id>/add_comment/', add_comment,
-         name='add_comment'),
+    path('recipe/<int:recipe_id>/add_comment/', add_comment, name='add_comment'),
     path('delete_recipe/<int:pk>/', delete_recipe, name='delete_recipe'),
 ]

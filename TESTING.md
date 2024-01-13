@@ -56,18 +56,18 @@ Lighthous chrome extension has been used to test the site
 
 | Page       | Size    | Screenshot                            | 
 |------------|---------|---------------------------------------|
-| Home       | Mobile  | ![screenshot](images/testing/l1.png)  | 
-| Home       | Desktop | ![screenshot](images/testing/ld1.png) | 
-| Contact Us | Mobile  | ![screenshot](images/testing/l2.png)  | 
-| Contact Us | Desktop | ![screenshot](images/testing/ld2.png) | 
-| Sign Up    | Mobile  | ![screenshot](images/testing/l3.png)  | 
-| Sign Up    | Desktop | ![screenshot](images/testing/ld3.png) | 
-| Login      | Mobile  | ![screenshot](images/testing/l4.png)  | 
-| Login      | Desktop | ![screenshot](images/testing/ld4.png) | 
-| Search     | Mobile  | ![screenshot](images/testing/l5.png)  | 
-| Search     | Desktop | ![screenshot](images/testing/ld5.png) | 
-| Event      | Mobile  | ![screenshot](images/testing/l6.png)  | 
-| Event      | Desktop | ![screenshot](images/testing/ld6.png) | 
+| Home       | Mobile  | ![screenshot]()  | 
+| Home       | Desktop | ![screenshot]() | 
+| Contact Us | Mobile  | ![screenshot]()  | 
+| Contact Us | Desktop | ![screenshot]() | 
+| Sign Up    | Mobile  | ![screenshot]()  | 
+| Sign Up    | Desktop | ![screenshot]() | 
+| Login      | Mobile  | ![screenshot]()  | 
+| Login      | Desktop | ![screenshot]() | 
+| Search     | Mobile  | ![screenshot]()  | 
+| Search     | Desktop | ![screenshot]() | 
+| Event      | Mobile  | ![screenshot]()  | 
+| Event      | Desktop | ![screenshot]() | 
 
 ## Python (PyTest)
 
