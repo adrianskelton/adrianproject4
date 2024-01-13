@@ -67,6 +67,26 @@ a {
     color: #fff;
 }
 
+/* Logo */
+
+.logo {
+    display: block;
+    max-height: 180px;
+    max-width: fit-content;
+}
+
+.img-fluid {
+    max-height: 264px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.logo .mobile {
+    display: none;
+    max-height: 180px;
+    max-width: fit-content;
+  }
+
 /* Layout and Structure */
 .hero {
     width: 100%;
@@ -91,19 +111,36 @@ a {
     text-decoration: underline;
 }
 
-/* Responsive Design */
-@media (max-width: 600px), (max-width: 979px) {
-    .logo .mobile {
-        display: block;
-        max-height: 180px;
-    }
+/* For mobile screen sizes */
 
+@media (max-width: 600px) {
+    .logo .mobile {
+      display: block;
+      max-height: 180px;
+    }
     .logo .desktop {
-        display: none;
-        max-height: 180px;
+      display: none;
+      max-height: 180px;
     }
 
     html {
         margin: 0;
     }
-}
+  }
+
+/* For tablet screen sizes */
+
+@media (max-width: 979px) {
+    .logo .mobile {
+      display: block;
+      max-height: 180px;
+    }
+    .logo .desktop {
+      display: none;
+      max-height: 180px;
+    }
+
+    html {
+        margin: 0;
+    }
+  }
