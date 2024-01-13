@@ -549,9 +549,13 @@ Testing includes following:
 
 ## Fixed Bugs
 
-  - **Erorr**: I could not runserver or make migrations at some point. The error below was shown. Migration folder 0004 was missing.
+  - **Eror**: I could not runserver or make migrations at some point. The error below was shown. Migration folder 0004 was missing.
   ![image](static/images/error-migration-error.png)
   - **Fix**: Moved all the migration files to a subfolder and then tried again.
+
+  - **Problem**: I could not get css to load.
+  - **Fix**: I had set debug mode to true which seemed to affect loading of files.
+  
 
 ## Known issues
 
@@ -579,25 +583,7 @@ To style the forms I watched the following tutorials
 
 - The main code of this project is based on the Code Institute tutorial ["I Think Therefore I Blog"](https://github.com/Code-Institute-Solutions/Django3blog) with changes made to suit my project. [Django Documentation](https://docs.djangoproject.com/en/4.2/) was used throughout the project.
 
-- The readme skeleton was taken from 
-
-- I found Stack Overflow to be an excellent source of inspiration and a valuable channel for gaining knowledge. Things I learned and borrow from there:
- 
-  - Instructions on how to put different background images/background colors on different pages ([click here to read more](https://stackoverflow.com/questions/61434945/putting-a-different-background-image-on-a-different-page-in-a-website))
-
-  - Instructions on how to make navbar links active depending on the page a user is viewing ([click here to read more](https://stackoverflow.com/questions/46617375/how-do-i-show-an-active-link-in-a-django-navigation-bar-dropdown-list))
-
-  - Ability to create/update and delete recipes while getting a success message displayed is achieved by following instructions in two different Stack Overflow articles.
-    - [Create/update](https://stackoverflow.com/questions/67366138/django-display-message-after-creating-a-post);
-    - [Delete](https://stackoverflow.com/questions/47636968/django-messages-for-a-successfully-delete-add-or-edit-item).
-
-  - A method to generate slug for recipes submitted through the site form ([click here to read more](https://stackoverflow.com/questions/837828/how-do-i-create-a-slug-in-django)).
-
-  - PositiveIntegerFields (estimated_time and servings) were validated by following instructions in this [article](https://stackoverflow.com/questions/2248617/0-value-in-django-positiveintegerfield).
-
-- The option to sort recipes by category was implemented following [Very Academy](https://www.youtube.com/watch?v=S9-Bt1JgRjQ&t=2137s) tutorial. I made some modifications in order to show my categories in the form of clickable "boxes" instead of displaying them in the navbar.
-
-- The CSS code for category boxes to zoom/scale in on hover was borrowed from [W3Schools](https://www.w3schools.com/howto/howto_css_zoom_hover.asp).
+- The readme skeleton was taken from https://github.com/Kattis91/what-is-cooking
 
 - [Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/) was used to generate Django Secret Key.
 
@@ -801,7 +787,7 @@ I would like to aknowledge the following people:
 
 ## Fork
 
-- Log in to **GitHub** and ind the repository for this project, [_Kattis91/what-is-cooking_](https://github.com/Kattis91/what-is-cooking).
+- Log in to **GitHub** and ind the repository for this project, [adrianskelton/adrianproject4](https://github.com/adrianskelton/adrianproject4).
 
 - In the top-right corner of the page, click **Fork**.
 
