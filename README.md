@@ -176,7 +176,7 @@ Logged-in users.
 <details>
 <summary>Recipe page</summary>
 
-![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1698070413/wireframes_recipes_page_ab1x0w.png)
+![image](static/images/readme/desktop-recipe-page.png)
 
 </details>
 
@@ -207,14 +207,14 @@ LEFT: all users | RIGHT: logged-in users.
 <details>
 <summary>Login</summary>
 
-![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1698070413/wireframes_sign_in_jds4rh.png)
+![image]()
 
 </details>
 
 <details>
 <summary>Logout</summary>
 
-![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1698070413/wireframes_sign_out_eahchw.png)
+![image]()
 
 </details>
 
@@ -413,16 +413,16 @@ The short welcome explains:
   - The concept of the site as a platform to share recipes.
   - That the user will need to create an account to do this.
 
-![image](static/images/welcome-guest.png)
+![image](static/images/readme/welcome-guest.png)
 
 The message then changes as seen below. I put a link after the welcome to the user to allow them to view their recipes. From this page they are also able to comment, like, edit and delete their recipes.
 
-![image](static/images/welcome-logged-in.png)
+![image](static/images/readme/welcome-logged-in.png)
 
 
 #### Footer
 
-![image](static/images/footer.png)
+![image](static/images/readme/footer.png)
 
 - The footer is quite unobtrusive to not take away from the main content, the social media icons open up in a new page when clicked.
 - The footer remains consistent across all pages.
@@ -452,16 +452,10 @@ The message then changes as seen below. I put a link after the welcome to the us
 
 #### Logout
 
-![image](static/images/readme/       logout-confirm.png)
+![image](static/images/readme/logout-confirm.png)
 
 - When the user clicks on Logout in the navbar, they are redirected to a page displaying a confirmation message above.
 
-  - SIGN OUT:
-  
-    - A message indicating that the operation was successful is shown on the screen.
-
-  - REMAIN LOGGED IN:
-    - The user redirects to the home page.
 
 
 #### Recipes page
@@ -489,46 +483,26 @@ The recipe detail page includes the following information:
 - recipe title;
 - country;
 - number of servings;
-- create date;
-- likes icon:
-- comment icon that shows the number of comments on the selected recipe.
-   
-      ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697376095/static/images/recipe_view_author.7712060f0483.png)
+- create date
+- likes
+- Ingredients section.
+- Instructions section.
+- Comments section:
+- There are some comments on the recipe:
 
-      - EDIT
-        - By clicking the "EDIT" button, the user is redirected to the page with a form where they can edit the recipe posted by them.
-        - The form has the same fields as the "Add a Recipe" form.
-        - All the form fields are prepopulated.
-      
-      - DELETE
-        - By clicking the "DELETE" button, the user is redirected to the page where they get a question about whether they are sure that they want to delete the recipe.
-       
-          ![image](.png)
-          - The recipe gets deleted when the user clicks the "DELETE RECIPE" button. The user is redirected to the home page.
-          - The user is redirected to the home page when clicked the "GO BACK" button.
-
-  - Ingredients section.
-
-  - Instructions section.
-
-  - Comments section:
-    
-    - There are some comments on the recipe:
-
-      ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697376107/static/images/comments.c245aa6c507c.png)
+      ![image]()
     
     - There are NO comments:
 
-      ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697376099/static/images/no_comments.937fab397a78.png)
+      ![image]()
 
     - Leave a comment (available ONLY for logged-in users):
 
-      ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697376117/static/images/leave_a_comment.d764d9137d00.png)
+      ![image]()
 
 #### Add a Recipe page
 
 - This page includes a form that allows users who are logged in to publish their own recipes.
-
 - Available fields:
   - Title
   - Country
@@ -538,20 +512,6 @@ The recipe detail page includes the following information:
   - Instructions
   - Servings
 
-  ![image](static/images/create.png)
-  - Category (Dropdown menu)
-  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697376112/static/images/form_category.63f3dc7d46c1.png)
-  - Image
-  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697376114/static/images/form_featured_image.969458f814d3.png)
-  - Ingredients
-  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697376098/static/images/form_ingredients.1644f639b558.png)
-  - Instructions (Summernote field)
-  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697376106/static/images/form_instructions.6e139006d641.png)
-  - Estimated time
-  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697376116/static/images/form_estimated_time.f78b54b4e36b.png)
-  - Servings
-  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697376109/static/images/form_servings.b8ed7c47f0b4.png)
-  
   - Buttons
 
     ![image]()
@@ -569,11 +529,6 @@ The recipe detail page includes the following information:
 
 ### Future Features
 
-- Make it possible for logged-in users to save recipes as their favorites.
-
-- Add a feature that allows users to click on the author's name and view all the recipes published by that author.
-
-- Add some other choices, like difficulty level, meal type, cuisine.
 
 - Enable users to log in using their social media accounts.
 
@@ -623,6 +578,8 @@ To style the forms I watched the following tutorials
 ### Content
 
 - The main code of this project is based on the Code Institute tutorial ["I Think Therefore I Blog"](https://github.com/Code-Institute-Solutions/Django3blog) with changes made to suit my project. [Django Documentation](https://docs.djangoproject.com/en/4.2/) was used throughout the project.
+
+- The readme skeleton was taken from 
 
 - I found Stack Overflow to be an excellent source of inspiration and a valuable channel for gaining knowledge. Things I learned and borrow from there:
  
