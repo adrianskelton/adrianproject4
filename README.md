@@ -567,13 +567,13 @@ To style the forms I watched the following tutorials
 
 ### Media
 
-- All the images used on the website are downloaded from [Unsplash](https://unsplash.com/).
-
 - [Favicon Generator](https://favicon.io/favicon-converter/) was used to generate a favicon from the image.
 
 - [Font Awesome](https://fontawesome.com/) was used to add the icons for the social media links in the footer.
 
-- The recipes published by me are taken from [BBC Good Food](https://www.bbcgoodfood.com/recipes).
+- The hero image was taken from [Pexels](https://www.pexels.com/photo/sharing-cherry-tomatoes-3184188/)
+
+- The recipes published by me are taken from [Jamie Oliver](https://www.jamieoliver.com/).
 
 ### Content
 
