@@ -529,7 +529,7 @@ The recipe detail page includes the following information:
 
 ### Future Features
 
-
+- Categories to be added such as vegan, desert, main course etc
 - Enable users to log in using their social media accounts.
 
 [Back to top ⇧](#table-of-contents)
@@ -555,7 +555,7 @@ Testing includes following:
 
   - **Problem**: I could not get css to load.
   - **Fix**: I had set debug mode to true which seemed to affect loading of files.
-  
+
 
 ## Known issues
 

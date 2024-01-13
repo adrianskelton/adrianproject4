@@ -58,14 +58,12 @@ Lighthous chrome extension has been used to test the site
 |------------|---------|---------------------------------------|
 | Home       | Mobile  | ![screenshot]()  | 
 | Home       | Desktop | ![screenshot]() | 
-| Contact Us | Mobile  | ![screenshot]()  | 
-| Contact Us | Desktop | ![screenshot]() | 
-| Sign Up    | Mobile  | ![screenshot]()  | 
-| Sign Up    | Desktop | ![screenshot]() | 
+| Register    | Mobile  | ![screenshot]()  | 
+| Register    | Desktop | ![screenshot]() | 
 | Login      | Mobile  | ![screenshot]()  | 
 | Login      | Desktop | ![screenshot]() | 
-| Search     | Mobile  | ![screenshot]()  | 
-| Search     | Desktop | ![screenshot]() | 
+| Recipe Detail     | Mobile  | ![screenshot]()  | 
+| Recipe Detail     | Desktop | ![screenshot]() | 
 | Event      | Mobile  | ![screenshot]()  | 
 | Event      | Desktop | ![screenshot]() | 
 
