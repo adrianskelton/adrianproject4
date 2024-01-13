@@ -10,7 +10,7 @@ from .models import Recipe, Like_model, Comment
 
 @login_required
 def create_or_edit_recipe(request, pk=None):
-    # If 'pk' provided, it's an edit, otherwise, it's a create operation
+    # If 'pk' is provided, it's an edit operation, otherwise, it's a create operation
     if pk:
         recipe = get_object_or_404(Recipe, pk=pk)
     else:
@@ -27,6 +27,7 @@ def create_or_edit_recipe(request, pk=None):
             return redirect("recipe_detail", pk=recipe.pk)
 
     return render(request, "create_recipe.html", {"form": form})
+
 
 
 def like_recipe(request, pk):
@@ -115,23 +116,19 @@ def user_recipes(request):
 
 class top_five(View):
     template_name = 'top_five.html'
-
     def get(self, request, *args, **kwargs):
         top_five_recipes = Recipe.objects.order_by('-likes__count')[:5]
-        return render
-        (request, self.template_name, {'recipes': top_five_recipes})
+        return render(request, self.template_name, {'recipes': top_five_recipes})
 
 
 def sort_by_country(request, country):
     recipes_by_country = Recipe.objects.filter(country=country)
-    return render(request, "recipes_by_country.html",
-                  {"recipes": recipes_by_country})
+    return render(request, "recipes_by_country.html", {"recipes": recipes_by_country})
 
 
 def latest_recipes(request):
     latest_recipes = Recipe.objects.order_by("-created_at")[:5]
     return render(request, "latest_recipes.html", {"recipes": latest_recipes})
-
 
 @login_required
 def add_comment(request, recipe_id):
@@ -160,12 +157,11 @@ def edit_recipe(request, pk):
         form = RecipeForm(request.POST, request.FILES, instance=recipe)
         if form.is_valid():
             form.save()
-            return redirect("user_recipes")  # Redirect to the user_recipes
+            return redirect("user_recipes")  # Redirect to the user_recipes page after editing
     else:
         form = RecipeForm(instance=recipe)
 
-    return render(request, "edit_recipe.html",
-                  {"form": form, "recipe": recipe})
+    return render(request, "edit_recipe.html", {"form": form, "recipe": recipe})
 
 
 def delete_recipe(request, pk):
@@ -178,5 +174,5 @@ def delete_recipe(request, pk):
     else:
         form = DeleteRecipeForm()
 
-    return render(request, "delete_recipe.html", {"recipe": recipe,
-                                                  "form": form})
+    return render(request, "delete_recipe.html", {"recipe": recipe, "form": form})
+    
