@@ -187,7 +187,12 @@ Logged-in users.
 
 </details>
 
+<details>
+<summary>Mobile view home page</summary>
 
+![image](static/images/readme/mobile-landing-page.png)
+
+</details>
 
 ### Surface
 
@@ -489,6 +494,9 @@ Testing includes following:
 
   - **Problem**: I could not get css to load.
   - **Fix**: I had set debug mode to true which seemed to affect loading of files.
+
+  - **Problem**: Could not get am i responsive to work
+  - **Fix**: post found on slack to ignore x-frame in settings. I just had to install an extension to do this in chrome
 
 
 ## Known issues
