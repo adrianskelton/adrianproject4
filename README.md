@@ -2,7 +2,7 @@
 
 "Family Recipe" is a recipe sharing website made for my Portfolio Project 4 for code institute, where users can upload and share recipes as well as reading recipes from other users.
 
-I thought about this as I have a family recipe book from South Africa and I think it would be great to have a website where family members could share their family recipes with eachother and the world. I also wanted a rating system based on the ammount of likes and a comment section for recipes. 
+I thought about this as I have a family recipe book from South Africa and I think it would be great to have a website where family members could share their family recipes with eachother and the world. I also wanted a rating system based on the amount of likes and a comment section for recipes. 
 
 ![image](static/images/readme/responsive.png)
 
@@ -183,40 +183,11 @@ Logged-in users.
 <details>
 <summary>Recipe detail page</summary>
 
-LEFT: all users | RIGHT: logged-in users.
-
-![image](.png)
+![image](static/images/readme/wire-desktop-recipe-page.png)
 
 </details>
 
-<details>
-<summary>Add a Recipe page</summary>
 
-![image](.png)
-
-</details>
-
-<details>
-
-<summary>Sign Up</summary>
-
-![image](.png)
-
-</details>
-
-<details>
-<summary>Login</summary>
-
-![image]()
-
-</details>
-
-<details>
-<summary>Logout</summary>
-
-![image]()
-
-</details>
 
 ### Surface
 
@@ -247,44 +218,6 @@ I went with following colors:
   - `WHITE` for the text in order to get a sufficient contrast ratio.
 
     ![image]()
-  
-<details>
-
-<summary>Click here to see all the buttons</summary>
-
-- Sign up: 
-    
-  ![image]()
-
-- Sign in:
-   
-  ![image]()
-  
-- Logout:
-
-  ![image]()
-
-- Add a recipe:
-
-  ![image]()
-
-- Update a recipe:
-
-  ![image]()
-
-- Delete confirmation:
-
-  ![image]()
-
-- Edit | Delete:
-
-  ![image]()
-
-- Submit (when leaving a comment):
-
-  ![image]()
-
-</details>
 
 #### Recipe images:
 
@@ -325,11 +258,6 @@ Users have the option to upload images in various sizes. To ensure consistency, 
 
   - [Django](https://www.djangoproject.com/)
    
-  - [Django-Allauth](https://docs.allauth.org/en/latest/)
-    - used for User authenticaion (sign up, sign in and sign out features).
-
-  - [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
-    - used to control rendering behaviour of Django forms.
 
   - [Gunicorn](https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/gunicorn/)
     - Python HTTP server for WSGI applications.
@@ -589,7 +517,7 @@ To style the forms I watched the following tutorials
 
 - The main code of this project is based on the Code Institute tutorial ["I Think Therefore I Blog"](https://github.com/Code-Institute-Solutions/Django3blog) with changes made to suit my project. [Django Documentation](https://docs.djangoproject.com/en/4.2/) was used throughout the project.
 
-- The readme skeleton was taken from https://github.com/Kattis91/what-is-cooking
+- The readme skeleton was taken from [Kattis91](https://github.com/Kattis91/what-is-cooking)
 
 - [Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/) was used to generate Django Secret Key.
 
@@ -668,8 +596,7 @@ I would like to aknowledge the following people:
 
 - Set environment variables:
   - **DATABASE_URL** with the value you just copied from ElephantSQL: `os.environ["DATABASE_URL"]="<copiedURL>`
-  - **SECRET_KEY**: `os.environ["SECRET_KEY"] = "randomSecretKey"` ([Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/) was used to generate a secret key).
-
+  - **SECRET_KEY**: `os.environ["SECRET_KEY"] = "randomSecretKey"` 
 
 ### Update settings.py
 
@@ -770,7 +697,7 @@ I would like to aknowledge the following people:
 
 ### Create a Procfile
 
-`web: gunicorn whatscooking.wsgi`
+`web: gunicorn family_recipe.wsgi`
 
 
 ### Go back to Heroku
@@ -779,7 +706,7 @@ I would like to aknowledge the following people:
 
 - Select **GitHub** as deployment method and click the **"Connect to GitHub"** button.
 
-- Search for the repository for this project, _what-is-cooking_. 
+- Search for the repository for this project, _adrianproject4_. 
 
 - Click **"Connect"** to link up Heroku app to the GitHub repository.
 
@@ -805,7 +732,7 @@ I would like to aknowledge the following people:
 
 ## Clone
 
-- On **GitHub**, navigate to your fork of the _what-is-cooking_ repository.
+- On **GitHub**, navigate to your fork of the _adrianproject4_ repository.
 
 - Above the list of files, click **<>Code**.
 
