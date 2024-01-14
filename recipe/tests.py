@@ -2,11 +2,13 @@ from django.test import TestCase
 from django.urls import reverse
 from django.contrib.auth.models import User
 from .models import Recipe
+from django.conf import settings
+print(f"Database used for the test: {settings.DATABASES['default']['NAME']}")
 
 class RecipeDetailViewTest(TestCase):
     def setUp(self):
         # Create a test user
-        self.user = User.objects.create_user(username='testuser', password='testpassword')
+        self.user = User.objects.create_user(username='userblah', password='testpassword999')
 
         # Create a test recipe
         self.recipe = Recipe.objects.create(
@@ -22,7 +24,7 @@ class RecipeDetailViewTest(TestCase):
 
     def test_recipe_detail_view(self):
         # Log in the test user
-        self.client.login(username='testuser', password='testpassword')
+        self.client.login(username='userblah', password='testpassword999')
 
         # Get the URL for the recipe detail view
         url = reverse('recipe_detail', args=[str(self.recipe.id)])
@@ -37,8 +39,11 @@ class RecipeDetailViewTest(TestCase):
         self.assertContains(response, 'Test Recipe')
 
         # Check that the response contains the recipe author's username
-        self.assertContains(response, 'testuser')
+        self.assertContains(response, 'userblah')
 
         # Check that the response contains the recipe description
         self.assertContains(response, 'This is a test recipe.')
+
+        print(response.content.decode())
+        print(f"Author's username: {self.user.username}")
 

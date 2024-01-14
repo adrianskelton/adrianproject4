@@ -419,6 +419,12 @@ The message then changes as seen below. I put a link after the welcome to the us
 
 ![image](static/images/readme/welcome-logged-in.png)
 
+#### User Recipes
+
+- When the user clicks on "view your recipes" they will be taken to the recipes that they have submited. On this page they will be able to also edit and delete their recipes.
+
+![image](static/images/readme/user-recipe.png)
+
 
 #### Footer
 
